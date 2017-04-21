@@ -4,12 +4,64 @@
   .ic--#{nth($sprite, 10)}
     &:before
       +bs($sprite)
+a
+  text-decoration: none
+  outline: none
+  &:hover,
+  &:focus
+    text-decoration: none     
+    outline: none
 .text-danger
   color: #e74c3c
   text-align: left
+.button
+  background: $main-btn-color  
+  color: $main-text-color 
+  box-shadow: 0px 8px 0px 0px rgba(255,162,0,1)
+  transition: all 0.3s ease
+  border: 0
+  padding: 17px 10px 11px
+  text-align: center
+  white-space: normal
+  font: 400 20px/30px $main-font-bebas
+  &:hover,
+  &:focus
+    color: $main-text-color 
+    background: rgba(255,162,0,1)
+  &--size
+    width: 100%      
 .modal
   -webkit-overflow-scrolling: touch
   transform: translateZ(0)
+.form
+  &__input
+    padding: 19px 10px 18px 10px
+    border: 0  
+    color: #878787
+    font: 400 14px/18px $main-font-roboto
+  &__title
+    font: 400 20px/30px $main-font-bebas
+    color: #fff 
+.input
+  &__heading
+    font: 600 16px/20px $main-font-bebas
+    color: #fff
+    margin-bottom: 10px    
++r(768)
+  .form
+    &__title
+      font: 400 24px/30px $main-font-bebas 
+      margin-bottom: 20px 
+  .input
+    &__heading
+      font: 600 20px/22px $main-font-bebas
+      margin-bottom: 10px
++r(992)
+  .form
+    &-group
+      margin-bottom: 20px
+    &__title
+      font: 400 30px/36px $main-font-bebas  
 +comment("home page style")
 .navbar
   padding: 20px 0
@@ -20,9 +72,10 @@
   &__text
     display: inline-block
     color: $main-text-color
-    font: 300 14px/18px $main-font-bebas
+    font: 300 12px/14px $main-font-roboto
 .address
   display: table
+  padding-top: 15px
   &__icon
     display: table-cell
     vertical-align: middle
@@ -31,7 +84,166 @@
     vertical-align: middle  
     padding-left: 20px
     text-align: left    
+  &__text
+    font: 600 14px/18px $main-font-bebas 
+    color: $main-text-color 
+  &__subtext
+    font: 400 14px/18px $main-font-bebas 
+    color: $main-text-color  
 .contact
+  &__link
+    display: block
+  &__number  
+    font: 400 18px/24px $main-font-bebas
+    color: #000
+  &__btn
+    &--text
+      display: inline-block
+      font: 300 13px/18px $main-font-roboto
+      color: $main-text-color  
+      border-bottom: 1px dashed $main-text-color  
   &__icon
-    margin-right: 10px    
-+comment("home page style")
+    margin-right: 5px   
++r(760)
+  .contact
+    padding-top: 15px
+    &__number
+      font: 400 24px/24px $main-font-bebas    
+    &__btn
+      &--text
+        font: 300 16px/18px $main-font-roboto   
++r(992)  
+  .logo
+    &__text
+      padding-top: 5px
+  .address
+    padding-top: 0
+  .contact
+    padding-top: 0  
++r(1200)      
+  .contact
+    &__number
+      font: 400 28px/30px $main-font-bebas     
++comment("header style")
+.header
+  padding: 20px 0
+  background: url(../img/headerbg.jpg) no-repeat 
+  background-position: center
+  background-size: cover
+  overflow: hidden
+  &__form
+    position: relative
+    z-index: 10
+    margin: 0 auto
+    max-width: 320px
+    .ic
+      &__papka
+        position: absolute
+        top: 90px
+        right: -15px
+.title
+  position: relative
+  padding: 18px 10px
+  border-top: 5px solid #369  
+  border-bottom: 5px solid #369  
+  border-left: 5px solid #369  
+  &:before
+    content: ''
+    position: absolute
+    right: 0
+    top: -4px
+    height: 53%
+    width: 5px
+    background: #369
+    transform: rotate(-12deg) 
+    transform-origin: 100% 0
+  &:after
+    content: ''
+    position: absolute
+    right: 0
+    bottom: -4px
+    height: 53%
+    width: 5px
+    background: #369
+    transform: rotate(12deg)
+    transform-origin: 0 100%
+  &__heading
+    font: 400 30px/36px $main-font-roboto
+    color: #fff
+    margin: 0 0 10px
+  &__subheading
+    font: 300 18px/24px $main-font-roboto
+    color: #fff 
+    margin: 0
+    &--span
+      font: 600 18px/24px $main-font-roboto
+      color: red             
++r(480)     
+  .title
+    &:before,
+    &:after
+      height: 54% 
++r(768)
+  .header
+    padding: 50px 0  
+    &__form
+      max-width: none
+      .ic
+        &__papka
+          top: 200px
+          right: -150px
+        &__arrow
+          position: absolute  
+          top: 310px
+          left: 15px
+  .title
+    padding: 25px 30px 25px 35px  
+    &__heading
+      font: 400 36px/40px $main-font-roboto 
+    &:before
+      transform: rotate(-15deg) 
+      height: 53%
+    &:after   
+      transform: rotate(15deg) 
+      height: 53%  
++r(992)
+  .header
+    padding: 70px 0 
+    &__form
+      .ic
+        &__arrow  
+          top: 345px
+          right: 140px    
+  .title
+    border-width: 10px
+    &:before
+      transform: rotate(-17deg) 
+      height: 54%
+      width: 10px
+      top: -6px
+    &:after
+      transform: rotate(17deg)
+      height: 54%
+      width: 10px
+      bottom: -7px
+    &__heading
+      font: 600 40px/46px $main-font-roboto 
+    &__subheading
+      font: 300 24px/30px $main-font-roboto  
+      &--span  
+        font: 600 24px/30px $main-font-roboto    
++r(1200)
+  .header
+    &__form
+      .ic
+        &__arrow  
+          top: 315px
+          right: 40px
+  .title
+    &:before
+      height: 57%
+      top: -9px
+      transform: rotate(-17deg) 
+    &:after
+      transform: rotate(18deg)
+      height: 54%  
