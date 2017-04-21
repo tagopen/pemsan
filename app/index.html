@@ -128,8 +128,81 @@
           </div>
         </div>
       </section>
+      <section class="catalog">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <h2 class="sub-heading"></h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="product">
+                <div class="product__photo"><img class="product__img" src="/img/ties1.png" alt="Стандартные кабельные стяжки"></div>
+                <div class="product__content">
+                  <div class="product__name">Стандартные кабельные стяжки</div>
+                  <div class="product__option option">
+                    <div class="option__item"><i class="ic option__item ic--protractor"></i><span class="option__text">Ширина:<b class="option__size">от 2.5 мм.</b></span></div>
+                    <div class="option__item"><i class="ic option__item ic--angle"></i><span class="option__text">Длинна:<b class="option__size">от 10 мм.</b></span></div>
+                    <div class="option__item"><i class="ic option__item ic--trammel"></i><span class="option__text">Диаметр:<b class="option__size">от 22 мм.</b></span></div>
+                  </div>
+                </div>
+                <div class="product__order">
+                  <div class="product__price">от <span class="product__cost product__cost--price">0.12 грн</span></div>
+                  <div class="product__btn-group">
+                    <btn class="btn btn-default product__order" data-toggle="modal" data-target="modal__order">Заказать</btn><a class="product__link" data-toggle="modal" href="#modal__product_0">Узнать подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <div class="footer"></div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal__product_0">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <h2 class="sub-heading">product.name</h2>
+            <div class="modal__photo"><img class="modal__img" src="/img/undefined"></div>
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Артикул</th>
+                    <th>Ширина</th>
+                    <th>Длина</th>
+                    <th>Диаметр охвата</th>
+                    <th>Предел прочности</th>
+                    <th>Тип</th>
+                    <th>Кол-во в упаковке</th>
+                    <th>Кол-во в коробке</th>
+                    <th>Цена за шт</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"> 
+                      <input type="checkbox" name="form[characteristic][undefined]">
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row"> 
+                      <input type="checkbox" name="form[characteristic][undefined]">
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="loading">
       <div id="loading-center">
         <div id="loading-center-absolute">
