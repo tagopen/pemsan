@@ -220,19 +220,31 @@
 .ic--address:before {
   width: 40px;
   height: 45px;
-  background: url(../img/sprite.png) 0px -391px no-repeat;
+  background: url(../img/sprite.png) -68px -417px no-repeat;
 }
 
 .ic--arrow-md:before {
   width: 76px;
   height: 40px;
-  background: url(../img/sprite.png) -68px -313px no-repeat;
+  background: url(../img/sprite.png) -253px -313px no-repeat;
 }
 
 .ic--arrow-sm:before {
   width: 58px;
   height: 68px;
+  background: url(../img/sprite.png) 0px -417px no-repeat;
+}
+
+.ic--intro-1:before {
+  width: 94px;
+  height: 94px;
   background: url(../img/sprite.png) 0px -313px no-repeat;
+}
+
+.ic--intro-2:before {
+  width: 139px;
+  height: 50px;
+  background: url(../img/sprite.png) -104px -313px no-repeat;
 }
 
 .ic--papka-sm:before {
@@ -255,6 +267,47 @@ a {
 a:hover, a:focus {
   text-decoration: none;
   outline: none;
+}
+
+.heading {
+  font: 600 30px/30px "BebasNeue", sans-serif;
+  color: #101010;
+  margin: 0 0 25px;
+}
+
+.heading:after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 5px;
+  background-color: #369;
+  margin-top: 10px;
+}
+
+.heading__span {
+  display: block;
+  font: 24px/24px "BebasNeue", sans-serif;
+}
+
+@media only screen and (min-width: 760px) {
+  .heading {
+    font: 600 48px/50px "BebasNeue", sans-serif;
+  }
+  .heading:after {
+    margin-top: 15px;
+  }
+  .heading__span {
+    font: 30px/30px "BebasNeue", sans-serif;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .heading {
+    font: 600 60px/60px "BebasNeue", sans-serif;
+  }
+  .heading__span {
+    font: 36px/36px "BebasNeue", sans-serif;
+  }
 }
 
 .text-danger {
@@ -309,7 +362,7 @@ a:hover, a:focus {
   margin-bottom: 10px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 760px) {
   .form__title {
     font: 400 24px/30px "BebasNeue", sans-serif;
     margin-bottom: 20px;
@@ -510,7 +563,7 @@ a:hover, a:focus {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 760px) {
   .header {
     padding: 50px 0;
   }
@@ -601,5 +654,114 @@ a:hover, a:focus {
         -ms-transform: rotate(18deg);
             transform: rotate(18deg);
     height: 54%;
+  }
+}
+
+/* ---------------------------------------- */
+/* I N T R O    S T Y L E                   */
+/* ---------------------------------------- */
+.intro {
+  padding: 40px 0 0;
+  background: url(../img/introbg.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.intro__heading {
+  margin-bottom: 20px;
+}
+
+.intro__text {
+  font: 300 14px/21px "Roboto", sans-serif;
+  color: #101010;
+  margin-bottom: 25px;
+}
+
+.intro__icon {
+  display: inline-block;
+  position: relative;
+}
+
+.intro__question {
+  display: inline-block;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  font-size: 20px;
+  color: #369;
+  cursor: pointer;
+}
+
+.intro__question:hover, .intro__question:focus {
+  color: #fc0;
+}
+
+.intro__question:hover ~ .intro__answer, .intro__question:focus ~ .intro__answer {
+  opacity: 1;
+  display: inline-block;
+}
+
+.intro__answer {
+  position: absolute;
+  opacity: 0;
+  display: none;
+  padding: 10px;
+  font: 300 14px/21px "Roboto", sans-serif;
+  color: #101010;
+  background-color: white;
+  -webkit-box-shadow: 0 0 15px rgba(0, 3, 2, 0.35);
+          box-shadow: 0 0 15px rgba(0, 3, 2, 0.35);
+  width: 290px;
+  top: -10px;
+  right: 50%;
+  margin-right: -105px;
+}
+
+.ic--intro-1 {
+  margin-right: 20px;
+}
+
+@media only screen and (min-width: 760px) {
+  .intro {
+    padding: 0;
+  }
+  .intro__heading {
+    margin-top: 50px;
+  }
+  .intro__group {
+    padding-bottom: 50px;
+  }
+  .intro__col {
+    background: url(../img/introbg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: table;
+    text-align: center;
+  }
+  .intro__answer {
+    top: -50px;
+    margin-right: 0;
+    right: 0;
+    left: 120%;
+    z-index: 20;
+  }
+  .intro__img {
+    display: table-cell;
+  }
+  .ic--intro-1 {
+    margin-right: 40px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .intro__heading {
+    margin-bottom: 30px;
+  }
+  .intro__text {
+    font: 300 18px/27px "Roboto", sans-serif;
+  }
+  .ic--intro-1 {
+    margin-right: 60px;
   }
 }

@@ -1,13 +1,14 @@
-extends base/_layout.pug
-block variables
-
-block styles
-
-block scripts
-
-block content
-
-block footer
-  include partials/_footer.pug
-block modal
-  include partials/_modal.pug
+section.intro
+  .container
+    .row
+      .col-xs-12.col-sm-6.intro--height
+        h2.heading.intro__heading!=content.index.intro.heading
+        .intro__text!=content.index.intro.text
+        .intro__group
+          i.ic.ic--intro-1
+          span.intro__icon  
+            i.ic.ic--intro-2  
+            i.fa.fa-question-circle.intro__question
+            .intro__answer!=content.index.intro.answer 
+      .col-xs-12.col-sm-6.intro__col.intro--height
+        img.intro__img.img-responsive(src=content.index.intro.img.src, alt=content.index.intro.img.alt)

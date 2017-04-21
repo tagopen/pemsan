@@ -107,4 +107,23 @@
       adaptiveHeight: true
     });
   }*/
+
+  $(window).on('resize', function(){
+
+    if( $( window ).width() >= 768 ) {
+      $(function() {
+       $('.intro--height').matchHeight(
+       {
+        byRow: true,
+        property: 'height',
+        target: null,
+        remove: false
+      });
+     });
+      var $elemHeight = $('.intro--height').height();
+      $('.intro__col').css('line-height',  $elemHeight + 'px');
+    }
+
+}).trigger('resize');
+
 })(jQuery); // End of use strict
