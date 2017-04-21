@@ -223,6 +223,16 @@
   background: url(../img/sprite.png) 0px 0px no-repeat;
 }
 
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
 .text-danger {
   color: #e74c3c;
   text-align: left;
@@ -248,11 +258,12 @@
 .logo__text {
   display: inline-block;
   color: #101010;
-  font: 300 14px/18px "BebasNeueBold", sans-serif;
+  font: 300 12px/14px "Roboto", sans-serif;
 }
 
 .address {
   display: table;
+  padding-top: 15px;
 }
 
 .address__icon {
@@ -267,8 +278,64 @@
   text-align: left;
 }
 
+.address__text {
+  font: 600 14px/18px "BebasNeue", sans-serif;
+  color: #101010;
+}
+
+.address__subtext {
+  font: 600 14px/18px "BebasNeue", sans-serif;
+  color: #101010;
+}
+
+.contact__link {
+  display: block;
+}
+
+.contact__number {
+  font: 400 18px/24px "BebasNeue", sans-serif;
+  color: #000;
+}
+
+.contact__btn--text {
+  display: inline-block;
+  font: 300 13px/18px "Roboto", sans-serif;
+  color: #101010;
+  border-bottom: 1px dashed #101010;
+}
+
 .contact__icon {
-  margin-right: 10px;
+  margin-right: 5px;
+}
+
+@media only screen and (min-width: 760px) {
+  .contact {
+    padding-top: 15px;
+  }
+  .contact__number {
+    font: 400 24px/24px "BebasNeue", sans-serif;
+  }
+  .contact__btn--text {
+    font: 300 16px/18px "Roboto", sans-serif;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .logo__text {
+    padding-top: 5px;
+  }
+  .address {
+    padding-top: 0;
+  }
+  .contact {
+    padding-top: 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .contact__number {
+    font: 400 28px/30px "BebasNeue", sans-serif;
+  }
 }
 
 /* ---------------------------------------- */

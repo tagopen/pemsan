@@ -4,6 +4,13 @@
   .ic--#{nth($sprite, 10)}
     &:before
       +bs($sprite)
+a
+  text-decoration: none
+  outline: none
+  &:hover,
+  &:focus
+    text-decoration: none     
+    outline: none
 .text-danger
   color: #e74c3c
   text-align: left
@@ -20,9 +27,10 @@
   &__text
     display: inline-block
     color: $main-text-color
-    font: 300 14px/18px $main-font-bebas
+    font: 300 12px/14px $main-font-roboto
 .address
   display: table
+  padding-top: 15px
   &__icon
     display: table-cell
     vertical-align: middle
@@ -31,7 +39,44 @@
     vertical-align: middle  
     padding-left: 20px
     text-align: left    
+  &__text
+    font: 600 14px/18px $main-font-bebas 
+    color: $main-text-color 
+  &__subtext
+    font: 600 14px/18px $main-font-bebas 
+    color: $main-text-color  
 .contact
+  &__link
+    display: block
+  &__number  
+    font: 400 18px/24px $main-font-bebas
+    color: #000
+  &__btn
+    &--text
+      display: inline-block
+      font: 300 13px/18px $main-font-roboto
+      color: $main-text-color  
+      border-bottom: 1px dashed $main-text-color  
   &__icon
-    margin-right: 10px    
+    margin-right: 5px   
++r(760)
+  .contact
+    padding-top: 15px
+    &__number
+      font: 400 24px/24px $main-font-bebas    
+    &__btn
+      &--text
+        font: 300 16px/18px $main-font-roboto   
++r(992)  
+  .logo
+    &__text
+      padding-top: 5px
+  .address
+    padding-top: 0
+  .contact
+    padding-top: 0  
++r(1200)      
+  .contact
+    &__number
+      font: 400 28px/30px $main-font-bebas     
 +comment("home page style")
