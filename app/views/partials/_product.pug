@@ -1,0 +1,25 @@
+section.catalog
+  .container
+    .row
+      .col-xs-12
+        h2.sub-heading
+    .row
+      each product, i in content.index.product
+        .col-xs-12.col-sm-6.col-md-4
+          .product
+            .product__photo
+              img.product__img(src= content.site.hostname + '/img/' + product.img.src, alt= product.img.alt)
+            .product__content
+              .product__name!= product.name
+              .product__option.option
+                each item in product.size
+                  .option__item
+                    i.ic.option__item(class= item.icon)
+                    span.option__text!= item.name
+                      b.option__size!= item.value
+            .product__order
+              .product__price от 
+                span.product__cost.product__cost--price!= product.price
+              .product__btn-group
+                btn.btn.btn-default.product__order(data-toggle='modal', data-target='modal__order')!= product.btn
+                a.product__link(data-toggle='modal', href='#modal__product_' + i)!= product.link
