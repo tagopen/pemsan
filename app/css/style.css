@@ -767,6 +767,9 @@ a:hover, a:focus {
     left: 120%;
     z-index: 20;
   }
+  .intro__img {
+    display: inline-block;
+  }
   .ic--intro-1 {
     margin-right: 40px;
   }
@@ -980,6 +983,9 @@ a:hover, a:focus {
   }
   .endurance__text {
     padding-bottom: 150px;
+  }
+  .endurance__image {
+    display: inline-block;
   }
 }
 
