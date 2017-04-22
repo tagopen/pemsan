@@ -1,25 +1,25 @@
-each product, i in content.index.product
-  .modal.fade(tabindex='-1', role='dialog', id='modal__product_' + i)
+each product, i in content.index.catalog.products
+  .modal.fade(tabindex='-1', role='dialog', id='modal__product_' + (i + 1))
     .modal-dialog.modal-lg(role='document')
       .modal-content
         .modal-header
           button.close(type='button', data-dismiss='modal', aria-label='Close')
             span(aria-hidden='true') &times;
         .modal-body
-          h2.sub-heading product.name
+          h2.sub-heading!= product.name
           .modal__photo
-            img.modal__img(src=content.site.hostname + '/img/' + product.characteristic.src, alt= product.characteristic.src)
+            img.img-responsive.modal__img(src=content.site.hostname + '/img/' + product.characteristic.img.src, alt= product.characteristic.img.alt)
           .table-responsive
-            table.table.table-striped
+            table.table.table-striped.table-hover
               thead
                 tr
                   th
                   each head in product.characteristic.table.head
                     th!= head
               tbody
-                each table, count in product.characteristic.table
+                each body in product.characteristic.table.body
                   tr
                     th(scope="row") 
-                      input(type='checkbox', name= 'form[characteristic][' + table.body +']' )
-                    //- each value, key in table.body
-                    //-   td!= value.article
+                      input(type='checkbox', name= 'form[characteristic][' + body.article +']' )
+                    each value, key in body
+                      td!= value
