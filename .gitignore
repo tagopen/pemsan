@@ -1,3 +1,6 @@
+# Git origin files
+*.orig
+
 # Files archive
 *.rar
 *.zip
