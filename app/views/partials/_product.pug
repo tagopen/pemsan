@@ -2,23 +2,29 @@ section.catalog
   .container
     .row
       .col-xs-12
-        h2.sub-heading!= content.index.catalog.heading
+        h2.heading.catalog__heading!= content.index.catalog.heading
     .row
       each product, i in content.index.catalog.products
         .col-xs-12.col-sm-6.col-md-4
           .product
             .product__photo
-              img.product__img(src= content.site.hostname + '/img/' + product.img.src, alt= product.img.alt)
+              img.product__img.img-responsive(src= content.site.hostname + '/img/' + product.img.src, alt= product.img.alt)
             .text-center.product__content
               .product__name!= product.name
               .product__option.option
                 each item in product.size
                   .option__item
-                    i.ic.option__item(class= item.icon)
-                    span.option__text!= item.name
-                      b.option__size!= item.value
+                    .row
+                      .col-xs-10.col-xs-offset-1.col-md-8.col-md-offset-2
+                        .row
+                          .col-xs-2
+                            i.ic.option__icon(class= item.icon)
+                          .col-xs-5    
+                            span.option__text!= item.name
+                          .col-xs-5 
+                            b.option__size!= item.value
               .product__order
                 .product__price от 
                   span.product__cost.product__cost--price!= product.price
                 .product__btn-group
-                  btn.btn.btn-default.product__order(data-toggle='modal', data-target='#modal__product_' + (i +1))!= product.btn
+                  btn.btn.button.product__btn(data-toggle='modal', data-target='#modal__product_' + (i +1))!= product.btn

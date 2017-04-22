@@ -223,6 +223,12 @@
   background: url(../img/sprite.png) -68px -417px no-repeat;
 }
 
+.ic--angle:before {
+  width: 16px;
+  height: 15px;
+  background: url(../img/sprite.png) -339px -337px no-repeat;
+}
+
 .ic--arrow-md:before {
   width: 76px;
   height: 40px;
@@ -259,6 +265,18 @@
   background: url(../img/sprite.png) -405px 0px no-repeat;
 }
 
+.ic--protractor:before {
+  width: 20px;
+  height: 14px;
+  background: url(../img/sprite.png) -339px -313px no-repeat;
+}
+
+.ic--trammel:before {
+  width: 16px;
+  height: 14px;
+  background: url(../img/sprite.png) -369px -313px no-repeat;
+}
+
 a {
   text-decoration: none;
   outline: none;
@@ -273,6 +291,10 @@ a:hover, a:focus {
   font: 600 30px/30px "BebasNeue", sans-serif;
   color: #101010;
   margin: 0 0 25px;
+}
+
+.heading--white {
+  color: #fff;
 }
 
 .heading:after {
@@ -763,5 +785,164 @@ a:hover, a:focus {
   }
   .ic--intro-1 {
     margin-right: 60px;
+  }
+}
+
+/* ---------------------------------------- */
+/* C A T A L O G    S T Y L E               */
+/* ---------------------------------------- */
+.catalog {
+  padding: 40px 0;
+}
+
+.product {
+  -webkit-box-shadow: 0 0 0 2px #f1f1f1;
+          box-shadow: 0 0 0 2px #f1f1f1;
+  margin-bottom: 30px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.product:hover, .product:focus {
+  -webkit-box-shadow: 2.5px 4.3px 45px rgba(0, 3, 2, 0.1);
+          box-shadow: 2.5px 4.3px 45px rgba(0, 3, 2, 0.1);
+}
+
+.product__photo {
+  margin-bottom: 25px;
+}
+
+.product__name {
+  font: 600 18px/20px "BebasNeue", sans-serif;
+  color: #101010;
+  margin-bottom: 20px;
+}
+
+.product__name:after {
+  content: '';
+  display: block;
+  margin: 5px auto 0;
+  width: 75px;
+  height: 3px;
+  background-color: #369;
+}
+
+.product__option {
+  margin-bottom: 20px;
+}
+
+.product__price {
+  font: 400 18px/20px "Roboto", sans-serif;
+  color: #101010;
+  margin-bottom: 10px;
+}
+
+.product__cost {
+  font: 600 36px/40px "BebasNeue", sans-serif;
+  color: red;
+}
+
+.product__order {
+  padding: 25px 0 45px;
+  background-color: #f8f8f8;
+}
+
+.product__btn {
+  width: 180px;
+  font: 600 24px/30px "BebasNeue", sans-serif;
+}
+
+.option__item {
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.option__text {
+  font: 300 18px/20px "Roboto", sans-serif;
+}
+
+.option__icon {
+  vertical-align: top;
+}
+
+@media only screen and (min-width: 760px) {
+  .product__name {
+    font: 600 24px/27px "BebasNeue", sans-serif;
+  }
+}
+
+/* ---------------------------------------- */
+/* P R O P E R T I E S    S T Y L E         */
+/* ---------------------------------------- */
+.properties {
+  padding: 25px 0 30px;
+  background: url(../img/propertiesbg.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.properties__title {
+  font: 500 18px/24px "Roboto", sans-serif;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.properties__span--blue {
+  color: #369;
+}
+
+.properties__span--red {
+  color: red;
+}
+
+.properties__col {
+  margin-bottom: 15px;
+}
+
+.properties__text {
+  display: table-cell;
+  font: 300 18px/24px "Roboto", sans-serif;
+  color: #fff;
+}
+
+.properties__point {
+  display: table-cell;
+  vertical-align: middle;
+  font: 400 36px/36px "BebasNeue", sans-serif;
+  padding-right: 10px;
+}
+
+.properties__point--blue {
+  color: #369;
+}
+
+.properties__point--red {
+  color: red;
+}
+
+@media only screen and (min-width: 760px) {
+  .properties {
+    padding: 50px 0 100px;
+    background: url(../img/propertiesbg-lg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .properties__title {
+    font: 500 24px/30px "Roboto", sans-serif;
+  }
+  .properties__col {
+    float: right;
+  }
+  .properties__point {
+    font: 400 48px/50px "BebasNeue", sans-serif;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .properties {
+    padding: 50px 0 180px;
+  }
+  .properties__title {
+    margin-bottom: 60px;
   }
 }

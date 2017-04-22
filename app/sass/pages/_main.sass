@@ -15,6 +15,8 @@ a
   font: 600 30px/30px $main-font-bebas
   color: $main-text-color  
   margin: 0 0 25px
+  &--white
+    color: #fff
   &:after
     content: ''
     display: block
@@ -352,3 +354,100 @@ a
   .ic
     &--intro-1
       margin-right: 60px       
++comment("catalog style")      
+.catalog
+  padding: 40px 0
+.product
+  box-shadow: 0 0 0 2px #f1f1f1
+  margin-bottom: 30px
+  transition: all 0.3s ease
+  &:hover,
+  &:focus
+    box-shadow: 2.5px 4.3px 45px rgba(0, 3, 2, 0.1)
+  &__photo
+    margin-bottom: 25px
+  &__name
+    font: 600 18px/20px $main-font-bebas 
+    color: $main-text-color
+    margin-bottom: 20px
+    &:after
+      content: ''
+      display: block
+      margin: 5px auto 0
+      width: 75px
+      height: 3px
+      background-color: #369
+  &__option
+    margin-bottom: 20px
+  &__price
+    font: 400 18px/20px $main-font-roboto
+    color: $main-text-color 
+    margin-bottom: 10px 
+  &__cost   
+    font: 600 36px/40px $main-font-bebas  
+    color: red
+  &__order  
+    padding: 25px 0 45px
+    background-color: #f8f8f8
+  &__btn
+    width: 180px  
+    font: 600 24px/30px $main-font-bebas
+.option
+  &__item
+    margin-bottom: 5px
+    text-align: left
+  &__text   
+    font: 300 18px/20px $main-font-roboto 
+  &__icon
+    vertical-align: top  
++r(760)
+  .product
+    &__name
+      font: 600 24px/27px $main-font-bebas 
++comment("properties style")       
+.properties
+  padding: 25px 0 30px
+  background: url(../img/propertiesbg.jpg) no-repeat
+  background-position: center
+  background-size: cover
+  &__title
+    font: 500 18px/24px $main-font-roboto
+    color: #fff
+    margin-bottom: 25px
+  &__span
+    &--blue
+      color: #369
+    &--red
+      color: red
+  &__col
+    margin-bottom: 15px    
+  &__text
+    display: table-cell
+    font: 300 18px/24px $main-font-roboto
+    color: #fff
+  &__point  
+    display: table-cell
+    vertical-align: middle
+    font: 400 36px/36px $main-font-bebas
+    padding-right: 10px
+    &--blue
+      color: #369
+    &--red
+      color: red
++r(760)  
+  .properties
+    padding: 50px 0 100px
+    background: url(../img/propertiesbg-lg.jpg) no-repeat
+    background-position: center
+    background-size: cover
+    &__title
+      font: 500 24px/30px $main-font-roboto 
+    &__col
+      float: right  
+    &__point  
+      font: 400 48px/50px $main-font-bebas  
++r(1200)  
+  .properties
+    padding: 50px 0 180px       
+    &__title
+      margin-bottom: 60px
