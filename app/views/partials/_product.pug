@@ -21,6 +21,4 @@ section.catalog
                 .product__price от 
                   span.product__cost.product__cost--price!= product.price
                 .product__btn-group
-                  btn.btn.btn-default.product__order(data-toggle='modal', data-target='modal__order')!= product.btn
-                .product__btn-group
-                  a.product__link(data-toggle='modal', href='#modal__product_' + (i +1))!= product.link
+                  btn.btn.btn-default.product__order(data-toggle='modal', data-target='#modal__product_' + (i +1))!= product.btn
