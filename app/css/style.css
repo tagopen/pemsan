@@ -340,12 +340,12 @@ a:hover, a:focus {
 .button {
   background: #fc0;
   color: #101010;
-  -webkit-box-shadow: 0px 8px 0px 0px #ffa200;
-          box-shadow: 0px 8px 0px 0px #ffa200;
+  -webkit-box-shadow: inset 0px -8px 0px 0px #ffa200;
+          box-shadow: inset 0px -8px 0px 0px #ffa200;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 0;
-  padding: 17px 10px 11px;
+  padding: 17px 10px 18px;
   text-align: center;
   white-space: normal;
   font: 400 20px/30px "BebasNeue", sans-serif;
@@ -756,8 +756,8 @@ a:hover, a:focus {
   }
   .intro__col {
     background: url(../img/introbg.png) no-repeat;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
     text-align: center;
   }
   .intro__answer {
@@ -973,18 +973,26 @@ a:hover, a:focus {
     padding: 0;
   }
   .endurance__heading {
-    padding-top: 100px;
+    margin-top: 100px;
   }
   .endurance__col {
+    display: table-cell;
+    vertical-align: middle;
     background: url(../img/endurancecolbg.png) no-repeat;
     background-position: center;
     background-size: cover;
     text-align: center;
   }
-  .endurance__text {
-    padding-bottom: 150px;
+  .endurance__column {
+    float: right;
   }
-  .endurance__image {
+  .endurance__height {
+    display: table;
+  }
+  .endurance__text {
+    margin-bottom: 150px;
+  }
+  .endurance__img {
     display: inline-block;
   }
 }
@@ -1000,5 +1008,122 @@ a:hover, a:focus {
   }
   .endurance__text {
     font: 300 18px/24px "Roboto", sans-serif;
+  }
+}
+
+/* ---------------------------------------- */
+/* A D V A N T A G E S    S T Y L E         */
+/* ---------------------------------------- */
+.advantages {
+  background: url(../img/advbg.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 40px 0 10px;
+}
+
+.advantages__image {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.advantages__image img {
+  display: inline-block;
+}
+
+.advantages__box {
+  margin-bottom: 25px;
+}
+
+.advantages__heading {
+  font: 600 24px/26px "BebasNeue", sans-serif;
+  color: #369;
+  margin-bottom: 20px;
+}
+
+.advantages__icon {
+  margin-right: 10px;
+}
+
+.advantages__text {
+  font: 300 14px/21px "Roboto", sans-serif;
+  color: #fff;
+}
+
+.ic--drop:before {
+  background: url(../img/icons/drop.svg);
+  width: 16px;
+  height: 21px;
+}
+
+.ic--tower:before {
+  background: url(../img/icons/tower.svg);
+  width: 16px;
+  height: 21px;
+}
+
+.ic--atom:before {
+  background: url(../img/icons/atom.svg);
+  width: 20px;
+  height: 21px;
+}
+
+.ic--resist:before {
+  background: url(../img/icons/resist.svg);
+  width: 16px;
+  height: 21px;
+}
+
+@media only screen and (min-width: 760px) {
+  .advantages {
+    padding-top: 50px;
+  }
+  .advantages__container {
+    position: relative;
+  }
+  .advantages__image {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    margin-left: -76px;
+    margin-top: -85px;
+  }
+  .advantages__col {
+    margin: 1px;
+  }
+  .advantages__col--left {
+    text-align: right;
+  }
+  .advantages__col--left .advantages__icon {
+    right: -35px;
+    margin: 0;
+  }
+  .advantages__col--right {
+    float: right;
+  }
+  .advantages__col--right .advantages__icon {
+    left: -35px;
+    margin: 0;
+  }
+  .advantages__heading {
+    position: relative;
+  }
+  .advantages__icon {
+    position: absolute;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .advantages__box {
+    margin-bottom: 45px;
+  }
+  .advantages__heading {
+    font: 600 30px/36px "BebasNeue", sans-serif;
+  }
+  .advantages__text {
+    font: 300 18px/24px "Roboto", sans-serif;
+  }
+  .advantages__image {
+    margin-left: -196px;
+    margin-top: -142px;
   }
 }

@@ -45,10 +45,10 @@ a
 .button
   background: $main-btn-color  
   color: $main-text-color 
-  box-shadow: 0px 8px 0px 0px rgba(255,162,0,1)
+  box-shadow: inset 0px -8px 0px 0px rgba(255,162,0,1)
   transition: all 0.3s ease
   border: 0
-  padding: 17px 10px 11px
+  padding: 17px 10px 18px
   text-align: center
   white-space: normal
   font: 400 20px/30px $main-font-bebas
@@ -330,8 +330,8 @@ a
       padding-bottom: 50px 
     &__col
       background: url(../img/introbg.png) no-repeat
-      background-size: cover
       background-position: center
+      background-size: cover
       text-align: center
     &__answer
       top: -50px
@@ -340,7 +340,7 @@ a
       left: 120%
       z-index: 20
     &__img
-      display: inline-block
+      display: inline-block  
   .ic
     &--intro-1
       margin-right: 40px     
@@ -466,16 +466,22 @@ a
   .endurance
     padding: 0
     &__heading
-      padding-top: 100px
+      margin-top: 100px
     &__col
+      display: table-cell
+      vertical-align: middle
       background: url(../img/endurancecolbg.png) no-repeat
       background-position: center
       background-size: cover
       text-align: center
+    &__column
+      float: right  
+    &__height
+      display: table
     &__text
-      padding-bottom: 150px
-    &__image
-      display: inline-block  
+      margin-bottom: 150px
+    &__img    
+      display: inline-block
 +r(992)       
   .endurance
     &__heading
@@ -486,4 +492,84 @@ a
       margin-bottom: 30px
     &__text
       font: 300 18px/24px $main-font-roboto
-      
++comment("advantages style")       
+.advantages
+  background: url(../img/advbg.jpg) no-repeat
+  background-position: center
+  background-size: cover
+  padding: 40px 0 10px
+  &__image
+    text-align: center
+    margin-bottom: 25px
+    img
+      display: inline-block
+  &__box
+    margin-bottom: 25px
+  &__heading
+    font: 600 24px/26px $main-font-bebas 
+    color: #369
+    margin-bottom: 20px
+  &__icon
+    margin-right: 10px
+  &__text
+    font: 300 14px/21px $main-font-roboto
+    color: #fff
+.ic
+  &--drop
+    &:before
+      background: url(../img/icons/drop.svg)     
+      width: 16px
+      height: 21px
+  &--tower
+    &:before
+      background: url(../img/icons/tower.svg)     
+      width: 16px
+      height: 21px
+  &--atom
+    &:before
+      background: url(../img/icons/atom.svg)     
+      width: 20px
+      height: 21px
+  &--resist
+    &:before
+      background: url(../img/icons/resist.svg)     
+      width: 16px
+      height: 21px            
++r(760)
+  .advantages
+    padding-top: 50px
+    &__container
+      position: relative
+    &__image
+      position: absolute
+      left: 50%
+      top: 40%
+      margin-left: -76px
+      margin-top: -85px
+    &__col
+      margin: 1px   
+      &--left
+        text-align: right
+        .advantages__icon
+          right: -35px
+          margin: 0
+      &--right
+        float: right   
+        .advantages__icon
+          left: -35px
+          margin: 0
+    &__heading    
+      position: relative
+    &__icon
+      position: absolute  
++r(1200)      
+  .advantages
+    &__box
+      margin-bottom: 45px
+    &__heading
+      font: 600 30px/36px $main-font-bebas
+    &__text
+      font: 300 18px/24px $main-font-roboto  
+    &__image
+      margin-left: -196px
+      margin-top: -142px  
