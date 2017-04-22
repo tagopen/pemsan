@@ -111,6 +111,7 @@
   $(window).on('resize', function(){
 
     if( $( window ).width() >= 768 ) {
+      /*  intro equal height*/
       $(function() {
        $('.intro--height').matchHeight(
        {
@@ -120,9 +121,25 @@
         remove: false
       });
      });
-      var $elemHeight = $('.intro--height').height();
-      $('.intro__col').css('line-height',  $elemHeight + 'px');
+      var $introHeight = $('.intro--height').height();
+      $('.intro__col').css('line-height',  $introHeight + 'px');
+    
+    /*  intro equal height*/
+    /*  endurance equal height*/
+      $(function() {
+       $('.endurance__height').matchHeight(
+       {
+        byRow: true,
+        property: 'height',
+        target: null,
+        remove: false
+      });
+     });
+      var $enduranceHeight = $('.endurance__height').height();
+      $('.endurance__col').css('line-height',  $enduranceHeight + 'px');
+      /*  endurance equal height*/
     }
+    
 
 }).trigger('resize');
 

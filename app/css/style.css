@@ -946,3 +946,61 @@ a:hover, a:focus {
     margin-bottom: 60px;
   }
 }
+
+/* ---------------------------------------- */
+/* E N D U R A N C E    S T Y L E           */
+/* ---------------------------------------- */
+.endurance {
+  padding: 35px 0;
+}
+
+.endurance__heading {
+  font: 500 18px/24px "Roboto", sans-serif;
+  color: #191919;
+  margin-bottom: 15px;
+}
+
+.endurance__img {
+  margin-bottom: 20px;
+}
+
+.endurance__text {
+  font: 300 14px/21px "Roboto", sans-serif;
+  color: #191919;
+}
+
+@media only screen and (min-width: 760px) {
+  .endurance {
+    padding: 0;
+  }
+  .endurance__heading {
+    margin-top: 100px;
+  }
+  .endurance__col {
+    background: url(../img/endurancecolbg.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: table;
+    text-align: center;
+  }
+  .endurance__text {
+    margin-bottom: 150px;
+  }
+  .endurance__img {
+    display: table-cell;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .endurance__heading {
+    font: 500 24px/30px "Roboto", sans-serif;
+    margin-bottom: 35px;
+  }
+  .endurance__img {
+    margin-left: -15px;
+    margin-bottom: 30px;
+  }
+  .endurance__text {
+    font: 300 18px/24px "Roboto", sans-serif;
+  }
+}
