@@ -1,0 +1,23 @@
+.contactus
+  .container.contactus__container
+    i.ic.ic--a4_1.hidden-xs.contactus__icon
+    i.ic.ic--a4_2.hidden-xs.contactus__icon
+    i.ic.ic--a4_3.hidden-xs.contactus__icon 
+    .row
+      .col-xs-12.col-sm-8.col-sm-offset-2.contactus__col
+        .row
+          .col-xs-12.col-sm-8.col-sm-offset-2
+            .contactus__form.form
+              .form__heading!=content.index.contact.heading
+              .form__text!=content.index.contact.text
+              form.contactForm.modal__form(method='post', action='./mail/mail.php')
+                .row
+                  .col-xs-12
+                    .row
+                      .form-group.col-xs-12
+                        .input__heading.input__heading--dark Укажите Ваш Email
+                        input.form-control.form__input.form__input--dark.form__email(aria-invalid='false', placeholder='Укажите Ваш Email', required, data-validation-required-message='Заполните поле корректно.', name='email', type='email')    
+                .row        
+                  .col-xs-12.text-left   
+                    button.btn.button.button--size(name='form[Контакт]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Получить актуальный каталог
+        

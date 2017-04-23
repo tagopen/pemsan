@@ -51,7 +51,7 @@ a
   padding: 17px 10px 18px
   text-align: center
   white-space: normal
-  font: 400 20px/30px $main-font-bebas
+  font: 600 20px/30px $main-font-bebas
   &:hover,
   &:focus
     color: $main-text-color 
@@ -67,6 +67,8 @@ a
     border: 0  
     color: #878787
     font: 400 14px/18px $main-font-roboto
+    &--dark
+      border: 1px solid #aeaeae
   &__title
     font: 400 20px/30px $main-font-bebas
     color: #fff 
@@ -74,7 +76,9 @@ a
   &__heading
     font: 600 16px/20px $main-font-bebas
     color: #fff
-    margin-bottom: 10px    
+    margin-bottom: 10px 
+    &--dark
+      color: $main-text-color   
 +r(760)
   .form
     &__title
@@ -613,6 +617,7 @@ a
   &__text
     font: 300 14px/21px $main-font-roboto
     margin-bottom: 15px
+    color: $main-text-color
   &__img
     display: inline-block  
 +r(760)    
@@ -633,3 +638,63 @@ a
       margin-bottom: 100px  
     &__text
       font: 300 18px/24px $main-font-roboto 
++comment("contact style") 
+.contactus
+  &__form
+    padding: 30px 0  
+.form
+  &__heading
+    font: 600 30px/32px $main-font-bebas
+    text-align: center
+    margin-bottom: 25px
+    color: $main-text-color
+  &__text
+    font: 300 18px/24px $main-font-roboto
+    text-align: center
+    color: $main-text-color
+    margin-bottom: 25px
++r(760)
+  .contactus
+    background: url(../img/contactbg.jpg) no-repeat
+    background-size: cover
+    background-position: center 
+    overflow: hidden 
+    &__container
+      position: relative
+    &__col
+      position: relative
+      z-index: 15
+      background: #fff   
+      transform: skew(-20deg);
+      transform-origin: 50% 50%
+    &__form
+      padding: 45px 0 55px  
+      transform: skew(20deg);
+      transform-origin: 50% 50%
+    &__icon
+      position: absolute
+  .form
+    &__heading
+      font: 600 36px/40px $main-font-bebas
+  .ic   
+    &--a4_1
+      bottom: -60px
+      left: -90px
+      z-index: 20  
+    &--a4_2
+      bottom: 40px
+      right: 30px
+      z-index: 10  
+    &--a4_3
+      bottom: 130px
+      left: 20px
+      z-index: 10  
++r(992)      
+  .form
+    &__text
+      font: 300 24px/28px $main-font-roboto
+  .ic   
+    &--a4_1
+      left: 20px  
+    &--a4_3
+      left: 100px    
