@@ -220,61 +220,79 @@
 .ic--address:before {
   width: 40px;
   height: 45px;
-  background: url(../img/sprite.png) -68px -417px no-repeat;
+  background: url(../img/sprite.png) -921px -275px no-repeat;
 }
 
 .ic--angle:before {
   width: 16px;
   height: 15px;
-  background: url(../img/sprite.png) -339px -337px no-repeat;
+  background: url(../img/sprite.png) -944px -195px no-repeat;
 }
 
 .ic--arrow-md:before {
   width: 76px;
   height: 40px;
-  background: url(../img/sprite.png) -253px -313px no-repeat;
+  background: url(../img/sprite.png) -772px -335px no-repeat;
 }
 
 .ic--arrow-sm:before {
   width: 58px;
   height: 68px;
-  background: url(../img/sprite.png) 0px -417px no-repeat;
+  background: url(../img/sprite.png) -876px -171px no-repeat;
+}
+
+.ic--box:before {
+  width: 762px;
+  height: 430px;
+  background: url(../img/sprite.png) 0px 0px no-repeat;
+}
+
+.ic--intime:before {
+  width: 196px;
+  height: 83px;
+  background: url(../img/sprite.png) -772px 0px no-repeat;
 }
 
 .ic--intro-1:before {
   width: 94px;
   height: 94px;
-  background: url(../img/sprite.png) 0px -313px no-repeat;
+  background: url(../img/sprite.png) -772px -171px no-repeat;
 }
 
 .ic--intro-2:before {
   width: 139px;
   height: 50px;
-  background: url(../img/sprite.png) -104px -313px no-repeat;
+  background: url(../img/sprite.png) -772px -275px no-repeat;
+}
+
+.ic--nova:before {
+  width: 189px;
+  height: 68px;
+  background: url(../img/sprite.png) -772px -93px no-repeat;
 }
 
 .ic--papka-sm:before {
   width: 395px;
   height: 303px;
-  background: url(../img/sprite.png) 0px 0px no-repeat;
+  background: url(../img/sprite.png) 0px -440px no-repeat;
 }
 
 .ic--papka-xs:before {
   width: 197px;
   height: 303px;
-  background: url(../img/sprite.png) -405px 0px no-repeat;
+  background: url(../img/sprite.png) -405px -440px no-repeat;
 }
 
 .ic--protractor:before {
   width: 20px;
   height: 14px;
-  background: url(../img/sprite.png) -339px -313px no-repeat;
+  background: url(../img/sprite.png) -944px -171px no-repeat;
 }
 
 .ic--trammel:before {
   width: 16px;
   height: 14px;
-  background: url(../img/sprite.png) -369px -313px no-repeat;
+  background: url(../img/sprite.png) -944px -220px no-repeat;
 }
 
 a {
@@ -1125,5 +1143,102 @@ a:hover, a:focus {
   .advantages__image {
     margin-left: -196px;
     margin-top: -142px;
+  }
+}
+
+/* ---------------------------------------- */
+/* E X P E R I E N C E    S T Y L E         */
+/* ---------------------------------------- */
+.experience {
+  padding: 35px 0 45px;
+  background: url(../img/expbg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.experience__text {
+  font: 500 18px/27px "Roboto", sans-serif;
+  color: #101010;
+}
+
+.experience__span {
+  font: 600 24px/27px "BebasNeue", sans-serif;
+  color: red;
+}
+
+.experience__subtext {
+  font: 300 14px/21px "Roboto", sans-serif;
+}
+
+@media only screen and (min-width: 760px) {
+  .experience {
+    padding: 35px 0 100px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .experience {
+    position: relative;
+    padding: 40px 0 350px;
+  }
+  .experience__icon {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+  }
+  .experience__text {
+    font: 500 24px/30px "Roboto", sans-serif;
+  }
+  .experience__span {
+    font: 600 30px/30px "BebasNeue", sans-serif;
+  }
+  .experience__subtext {
+    font: 300 18px/24px "Roboto", sans-serif;
+  }
+}
+
+/* ---------------------------------------- */
+/* D E L I V E R Y    S T Y L E             */
+/* ---------------------------------------- */
+.delivery {
+  padding: 35px 0 10px;
+  background: url(../img/deliverybg-sm.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.delivery__text {
+  font: 300 14px/21px "Roboto", sans-serif;
+  margin-bottom: 15px;
+}
+
+.delivery__img {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 760px) {
+  .delivery__text {
+    margin-bottom: 30px;
+  }
+  .delivery__img {
+    margin-top: 30px;
+  }
+  .ic--intime {
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .delivery {
+    padding-top: 50px;
+  }
+  .delivery__text {
+    margin-bottom: 60px;
+  }
+  .delivery__group {
+    margin-bottom: 100px;
+  }
+  .delivery__text {
+    font: 300 18px/24px "Roboto", sans-serif;
   }
 }
