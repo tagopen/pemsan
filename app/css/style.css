@@ -501,6 +501,10 @@ a:hover, a:focus {
   color: #000;
 }
 
+.contact__number--big {
+  font: 400 36px/40px "BebasNeue", sans-serif;
+}
+
 .contact__btn--text {
   display: inline-block;
   font: 300 13px/18px "Roboto", sans-serif;
@@ -518,6 +522,9 @@ a:hover, a:focus {
   }
   .contact__number {
     font: 400 24px/24px "BebasNeue", sans-serif;
+  }
+  .contact__number--big {
+    font: 400 36px/40px "BebasNeue", sans-serif;
   }
   .contact__btn--text {
     font: 300 16px/18px "Roboto", sans-serif;
@@ -539,6 +546,9 @@ a:hover, a:focus {
 @media only screen and (min-width: 1200px) {
   .contact__number {
     font: 400 28px/30px "BebasNeue", sans-serif;
+  }
+  .contact__number--big {
+    font: 400 48px/50px "BebasNeue", sans-serif;
   }
 }
 
@@ -1296,7 +1306,6 @@ a:hover, a:focus {
     background: url(../img/contactbg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
-    overflow: hidden;
   }
   .contactus__container {
     position: relative;
@@ -1353,5 +1362,137 @@ a:hover, a:focus {
   }
   .ic--a4_3 {
     left: 100px;
+  }
+}
+
+/* ---------------------------------------- */
+/* S E R T I F I C A T E    S T Y L E       */
+/* ---------------------------------------- */
+.sertificate {
+  padding: 55px 0;
+}
+
+.sertificate__item {
+  text-align: center;
+}
+
+.sertificate__link {
+  position: relative;
+  display: inline-block;
+}
+
+.sertificate__hover {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+.sertificate__hover:hover .sertificate__bg, .sertificate__hover:hover .sertificate__icon, .sertificate__hover:focus .sertificate__bg, .sertificate__hover:focus .sertificate__icon {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.sertificate__bg {
+  display: inline-block;
+  opacity: 0;
+  visibility: hidden;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: rgba(51, 102, 153, 0.8);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.sertificate__icon {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  left: 50%;
+  top: 50%;
+  font-size: 50px;
+  color: #fff;
+  margin-left: -18.4px;
+  margin-top: -20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* ---------------------------------------- */
+/* F O O T E R    S T Y L E                 */
+/* ---------------------------------------- */
+.footer {
+  position: relative;
+}
+
+.footer__column {
+  background-color: #369;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.footer__heading {
+  color: #fff;
+}
+
+.footer__heading:after {
+  background: #fff;
+}
+
+.footer__text {
+  font: 400 24px/28px "BebasNeue", sans-serif;
+  color: #fff;
+}
+
+.footer__col {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+@media only screen and (min-width: 760px) {
+  .footer {
+    padding: 50px 0;
+  }
+  .footer__bg {
+    display: inline-block;
+    position: absolute;
+    top: 50px;
+    height: 300px;
+    left: 0;
+    width: 55%;
+    background-color: #369;
+  }
+  .footer__bg:after {
+    content: '';
+    position: absolute;
+    right: -74px;
+    width: 0;
+    height: 100%;
+    border-style: solid;
+    border-width: 150px 0 150px 75px;
+    border-color: transparent transparent transparent #369;
+  }
+  .footer__column {
+    background-color: transparent;
+  }
+  .footer__col {
+    text-align: right;
+  }
+  .footer__contact {
+    padding-top: 90px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .footer__text {
+    font: 400 36px/40px "BebasNeue", sans-serif;
   }
 }

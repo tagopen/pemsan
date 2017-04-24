@@ -52,4 +52,9 @@
     }
   });
 
+  // Fancy Box
+  if ($("a.fancyimage").length) {
+    $("a.fancyimage").fancybox(); 
+  };
+
 })(jQuery); // End of use strict

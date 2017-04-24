@@ -1,1 +1,14 @@
 .footer
+  .footer__bg
+  .container
+    .row
+      .col-xs-12.col-sm-7.footer__column
+        .heading.footer__heading!=content.index.footer.heading
+        .footer__text!=content.index.footer.text
+      .col-xs-12.col-sm-5.footer__col
+        .contact.footer__contact
+          a.contact__link(href=content.index.nav.contact.href)  
+            .contact__number.contact__number--big!=content.index.nav.contact.number 
+          a.contact__btn(href="#")
+            i.contact__icon.fa.fa-phone
+            .contact__btn--text!=content.index.nav.contact.text
