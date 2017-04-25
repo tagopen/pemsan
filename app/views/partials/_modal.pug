@@ -1,25 +1,53 @@
+#nav__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal__small
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal__head
+        p.modal__heading Заказать обратный звонок
+      form.contactForm.modal__form(method='post', action='./mail/mail.php')
+        .row
+          .col-xs-10.col-xs-offset-1.col-sm-8.col-sm-offset-2
+            form.contactForm.modal__form(method='post', action='./mail/mail.php')
+              .row
+                .form-group.col-xs-12
+                  .input__heading.input__heading--dark Укажите Ваше Имя
+                  input.form-control.form__input.form__input--dark.form__name(aria-invalid='false', placeholder='Укажите Ваше Имя', required, data-validation-required-message='Заполните поле корректно.', name='email', type='text')    
+                .form-group.col-xs-12
+                  .input__heading.input__heading--dark Укажите Ваш Телефон
+                  input.form-control.form__input.form__input--dark.form__phone(aria-invalid='false', placeholder='Укажите Ваш Телефон', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='phone')   
+                .col-xs-12    
+                  .text-center
+                    button.btn.button.button--size(name='form[навбар]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") ПЕРЕЗВОНИТЕ МНЕ
+                    p.modal__subtext 
+                      i.fa.fa-lock(aria-hidden="true")
+                      | Гарантируем полную конфиденциальность ваших данных
 each product, i in content.index.catalog.products
   .modal.fade(tabindex='-1', role='dialog', id='modal__product_' + (i + 1))
     .modal-dialog.modal-lg(role='document')
       .modal-content
-        .modal-header
-          button.close(type='button', data-dismiss='modal', aria-label='Close')
-            span(aria-hidden='true') &times;
-        .modal-body
-          h2.sub-heading!= product.name
-          .modal__photo
-            img.img-responsive.modal__img(src=content.site.hostname + '/img/' + product.characteristic.img.src, alt= product.characteristic.img.alt)
-          .table-responsive
-            table.table.table-striped.table-hover
-              thead
-                tr
-                  th
-                  each head in product.characteristic.table.head
-                    th!= head
-              tbody
-                each body in product.characteristic.table.body
-                  tr
-                    th(scope="row") 
-                      input(type='checkbox', name= 'form[characteristic][' + body.article +']' )
-                    each value, key in body
-                      td!= value
+        button.close.modal__close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') &times;
+        .modal-body.modal__body
+          .row
+            .col-xs-10.col-xs-offset-1
+              h2.heading!= product.name
+              .modal__photo
+                img.img-responsive.modal__img(src=content.site.hostname + '/img/' + product.characteristic.img.src, alt= product.characteristic.img.alt)
+            .col-xs-12      
+              .table-responsive
+                table.table.table-striped
+                  thead.table__head
+                    tr
+                      th.table__heading
+                      each head in product.characteristic.table.head
+                        th.table__heading!= head
+                  tbody
+                    each body in product.characteristic.table.body
+                      tr
+                        th(scope="row") 
+                          input(type='checkbox', name= 'form[characteristic][' + body.article +']' )
+                        each value, key in body
+                          td.table__data!= value
+
+

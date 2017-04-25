@@ -7,6 +7,7 @@
 a
   text-decoration: none
   outline: none
+  cursor: pointer
   &:hover,
   &:focus
     text-decoration: none     
@@ -61,6 +62,43 @@ a
 .modal
   -webkit-overflow-scrolling: touch
   transform: translateZ(0)
+  &-dialog
+    margin-left: auto
+    margin-right: auto
+  &__body
+    padding-left: 0
+    padding-right: 0  
+  &__content
+    padding: 30px 0
+  &__heading
+    font: 600 24px/30px $main-font-bebas
+    color: $main-text-color 
+    text-align: center
+    margin-bottom: 20px  
+  &__subtext
+    padding-top: 10px
+    .fa
+      margin-right: 10px  
+  &__close
+    position: absolute
+    top: 5px
+    right: 5px
+    z-index: 25
+    &:hover,
+    &:focus
+      color: $main-btn-color 
+      opacity: 1
++r(760)
+  .modal
+    &-lg
+      width: 700px
+    &__heading  
+      font: 600 30px/40px $main-font-bebas 
+      margin-bottom: 40px 
++r(1200)
+  .modal
+    &-lg
+      width: 1100px           
 .form
   &__input
     padding: 19px 10px 18px 10px
@@ -232,7 +270,7 @@ a
           right: -150px
         &__arrow
           position: absolute  
-          top: 310px
+          top: 320px
           left: 15px
   .title
     padding: 25px 30px 25px 35px  
@@ -796,3 +834,17 @@ a
   .footer
     &__text
       font: 400 36px/40px $main-font-bebas
++comment("product modal style")
+.table
+  &__head
+    height: 90px
+    background-color: #ececec   
+    line-height: 90px
+  &__heading
+    font: 600 18px/20px $main-font-bebas
+    color: $main-text-color 
+    text-align: center 
+  &__data
+    font: 300 14px/18px $main-font-roboto
+    color: #070707
+    text-align: center     
