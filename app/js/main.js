@@ -48,6 +48,13 @@
         remove: false
       });
 
+      $('.product__name').matchHeight({
+        byRow: true,
+        property: 'height',
+        target: null,
+        remove: false
+      });
+
 
     }
   });

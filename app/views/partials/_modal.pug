@@ -26,10 +26,10 @@ each product, i in content.index.catalog.products
   .modal.fade(tabindex='-1', role='dialog', id='modal__product_' + (i + 1))
     .modal-dialog.modal-lg(role='document')
       .modal-content
-        button.close.modal__close(type='button', data-dismiss='modal', aria-label='Close')
-          span(aria-hidden='true') &times;
+        button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+          i.fa.fa-times(aria-hidden='true')
         .modal-body.modal__body
-          h2.heading!= product.name
+          h2.heading.heading--product-320.modal__head-name!= product.name
           .modal__photo
             img.img-responsive.modal__img(src=content.site.hostname + '/img/' + product.characteristic.img.src, alt= product.characteristic.img.alt)     
           .table-responsive
@@ -43,10 +43,25 @@ each product, i in content.index.catalog.products
                 each body in product.characteristic.table.body
                   tr
                     th(scope="row") 
-                     .table__radio-group.radio-btn
-                       input.table__radio-input(id="product-" + (i + 1), type='checkbox', name= 'form[characteristic][' + body.article +']')
-                       label.table__radio-label.table__radio-label--check(name='question3', for='product-' + (i + 1))
+                      .table__radio-group.radio-btn
+                        input.table__radio-input(id="product-" + (i + 1), type='checkbox', name= 'form[characteristic][' + body.article +']')
+                        label.table__radio-label.table__radio-label--check(name='label', for='product-' + (i + 1))
+                          span.table__radio-icon
                     each value, key in body
                       td.table__data!= value
+          form.contactForm.modal__form(method='post', action='./mail/mail.php')
+            .row
+              .col-xs-10.col-xs-offset-1
+                form.contactForm.modal__form(method='post', action='./mail/mail.php')
+                  .row
+                    .form-group.col-xs-12.col-sm-6.col-md-4
+                      .input__heading.input__heading--dark Укажите Ваше Имя
+                      input.form-control.form__input.form__input--dark.form__name(aria-invalid='false', placeholder='Укажите Ваше Имя', required, data-validation-required-message='Заполните поле корректно.', name='email', type='text')    
+                    .form-group.col-xs-12.col-sm-6.col-md-4
+                      .input__heading.input__heading--dark Укажите Ваш Телефон
+                      input.form-control.form__input.form__input--dark.form__phone(aria-invalid='false', placeholder='Укажите Ваш Телефон', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='phone')   
+                    .col-xs-12.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-0    
+                      .text-center
+                        button.btn.button.button--size.button--margin(name='form[навбар]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") ПЕРЕЗВОНИТЕ МНЕ
 
 
