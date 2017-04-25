@@ -29,25 +29,22 @@ each product, i in content.index.catalog.products
         button.close.modal__close(type='button', data-dismiss='modal', aria-label='Close')
           span(aria-hidden='true') &times;
         .modal-body.modal__body
-          .row
-            .col-xs-10.col-xs-offset-1
-              h2.heading!= product.name
-              .modal__photo
-                img.img-responsive.modal__img(src=content.site.hostname + '/img/' + product.characteristic.img.src, alt= product.characteristic.img.alt)
-            .col-xs-12      
-              .table-responsive
-                table.table.table-striped
-                  thead.table__head
-                    tr
-                      th.table__heading
-                      each head in product.characteristic.table.head
-                        th.table__heading!= head
-                  tbody
-                    each body in product.characteristic.table.body
-                      tr
-                        th(scope="row") 
-                          input(type='checkbox', name= 'form[characteristic][' + body.article +']' )
-                        each value, key in body
-                          td.table__data!= value
+          h2.heading!= product.name
+          .modal__photo
+            img.img-responsive.modal__img(src=content.site.hostname + '/img/' + product.characteristic.img.src, alt= product.characteristic.img.alt)     
+          .table-responsive
+            table.table.table-striped
+              thead.table__head
+                tr
+                  th.table__heading
+                  each head in product.characteristic.table.head
+                    th.table__heading!= head
+              tbody
+                each body in product.characteristic.table.body
+                  tr
+                    th(scope="row") 
+                      input(type='checkbox', name= 'form[characteristic][' + body.article +']' )
+                    each value, key in body
+                      td.table__data!= value
 
 
