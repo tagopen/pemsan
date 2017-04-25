@@ -43,7 +43,9 @@ each product, i in content.index.catalog.products
                 each body in product.characteristic.table.body
                   tr
                     th(scope="row") 
-                      input(type='checkbox', name= 'form[characteristic][' + body.article +']' )
+                     .table__radio-group.radio-btn
+                       input.table__radio-input(id="product-" + (i + 1), type='checkbox', name= 'form[characteristic][' + body.article +']')
+                       label.table__radio-label.table__radio-label--check(name='question3', for='product-' + (i + 1))
                     each value, key in body
                       td.table__data!= value
 
