@@ -30,8 +30,9 @@ each product, i in content.index.catalog.products
           i.fa.fa-times(aria-hidden='true')
         .modal-body.modal__body
           h2.heading.heading--product-320.modal__head-name!= product.name
-          .modal__photo
-            img.img-responsive.modal__img(src=content.site.hostname + '/img/' + product.characteristic.img.src, alt= product.characteristic.img.alt)     
+          each photo in product.characteristic.img
+            .modal__photo
+              img.img-responsive.modal__img(src=content.site.hostname + '/img/' + photo.src, alt= photo.alt)     
           .table-responsive
             table.table.table-striped
               thead.table__head
