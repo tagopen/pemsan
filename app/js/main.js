@@ -65,10 +65,20 @@
   };
 
   $(document).ready( function() {
-    var $navbarHeight = $('.navbar').height(),
-        $windowHeight = $(window).height(),
-        $deltaHeight = $windowHeight - $navbarHeight;
-    $('.success').css('min-height',  $deltaHeight + 'px');
+    var navbarHeight = $('.navbar').height(),
+        windowHeight = $(window).height(),
+        deltaHeight = windowHeight - navbarHeight;
+    $('.thanks').css('height',  deltaHeight + 'px');
   });
+
+/*var handler = function(){
+  
+  var height_footer = $('footer').height(); 
+  var height_header = $('header').height(); 
+  $('.content').css({'padding-bottom':height_footer+40, 'padding-top':height_header+40});
+  
+}
+$(window).bind('load', handler);
+$(window).bind('resize', handler);*/
 
 })(jQuery); // End of use strict

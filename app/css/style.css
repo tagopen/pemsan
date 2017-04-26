@@ -456,6 +456,10 @@ a:hover, a:focus {
   opacity: 1;
 }
 
+.modal__photo {
+  margin-bottom: 20px;
+}
+
 @media only screen and (min-width: 760px) {
   .modal-lg {
     width: 700px;
@@ -1674,42 +1678,42 @@ a:hover, a:focus {
 }
 
 /* ---------------------------------------- */
-/* S U C C E S S    P A G E    S T Y L E    */
+/* T H A N K S    P A G E    S T Y L E      */
 /* ---------------------------------------- */
-.success {
+.thanks {
   padding: 40px 0;
   background: url(../img/successbg.png) no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.success__heading {
+.thanks__heading {
   font: 600 32px/40px "BebasNeue", sans-serif;
   color: #101010;
   margin-bottom: 20px;
   text-align: center;
 }
 
-.success__subheading {
+.thanks__subheading {
   font: 300 24px/30px "Roboto", sans-serif;
   color: #101010;
   text-align: center;
   margin-bottom: 20px;
 }
 
-.success__img {
+.thanks__img {
   text-align: center;
 }
 
-.success__img img {
+.thanks__img img {
   display: inline-block;
 }
 
-.success__info {
+.thanks__info {
   position: relative;
 }
 
-.success__info:before {
+.thanks__info:before {
   -webkit-border-radius: 50%;
           border-radius: 50%;
   border: 15px solid rgba(51, 102, 153, 0.2);
@@ -1729,15 +1733,15 @@ a:hover, a:focus {
 }
 
 @media only screen and (min-width: 760px) {
-  .success__heading {
+  .thanks__heading {
     font: 600 50px/60px "BebasNeue", sans-serif;
     text-align: left;
   }
-  .success__subheading {
+  .thanks__subheading {
     text-align: left;
     margin: 0;
   }
-  .success__info:before {
+  .thanks__info:before {
     left: 0;
     border: 30px solid rgba(51, 102, 153, 0.2);
     font-size: 80px;
@@ -1747,17 +1751,17 @@ a:hover, a:focus {
 }
 
 @media only screen and (min-width: 992px) {
-  .success {
+  .thanks {
     padding-top: 100px;
   }
-  .success__img {
+  .thanks__img {
     position: relative;
     top: -50px;
   }
-  .success__heading {
+  .thanks__heading {
     font: 600 60px/64px "BebasNeue", sans-serif;
   }
-  .success__info:before {
+  .thanks__info:before {
     height: 250px;
     width: 250px;
     line-height: 200px;

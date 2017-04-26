@@ -14,12 +14,15 @@ nav.navbar
           i.ic.ic--address
           .address__info
             .address__text!=content.index.nav.address.text
-            .address__subtext!=content.index.nav.address.subtext
+            .address__subtext!=content.index.nav.address.subtext    
       .col-xs-6.col-sm-3.text-right
         .contact
           a.contact__link(href=content.index.nav.contact.href)  
             .contact__number!=content.index.nav.contact.number 
-          a.contact__btn
-            i.contact__icon.fa.fa-phone
-            a.contact__btn--text(data-toggle="modal" data-target="#nav__modal")!=content.index.nav.contact.text
+          if (relativePath !== "success")     
+            a.contact__btn
+              i.contact__icon.fa.fa-phone
+              a.contact__btn--text(data-toggle="modal" data-target="#nav__modal")!=content.index.nav.contact.text
+          else
+            a.contact__btn--text(href=content.site.hostname + "/") На главную
             
