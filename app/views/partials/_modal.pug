@@ -40,12 +40,12 @@ each product, i in content.index.catalog.products
                   each head in product.characteristic.table.head
                     th.table__heading!= head
               tbody
-                each body in product.characteristic.table.body
+                each body, j in product.characteristic.table.body
                   tr
                     th(scope="row") 
                       .table__radio-group.radio-btn
-                        input.table__radio-input(id="product-" + (i + 1), type='checkbox', name= 'form[characteristic][' + body.article +']')
-                        label.table__radio-label.table__radio-label--check(name='label', for='product-' + (i + 1))
+                        input.table__radio-input(id="product-" + (i + 1) + '_' + (j + 1), type='checkbox', name= 'form[characteristic][' + body.article +']')
+                        label.table__radio-label.table__radio-label--check(name='label', for='product-' + (i + 1) + '_' + (j + 1), tabindex="0")
                           span.table__radio-icon
                     each value, key in body
                       td.table__data!= value
