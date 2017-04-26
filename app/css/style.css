@@ -593,6 +593,12 @@ a:hover, a:focus {
 }
 
 @media only screen and (min-width: 760px) {
+  .address__text {
+    font: 600 18px/20px "BebasNeue", sans-serif;
+  }
+  .address__subtext {
+    font: 400 16px/18px "BebasNeue", sans-serif;
+  }
   .contact {
     padding-top: 15px;
   }
@@ -608,6 +614,12 @@ a:hover, a:focus {
 }
 
 @media only screen and (min-width: 992px) {
+  .address__text {
+    font: 600 20px/24px "BebasNeue", sans-serif;
+  }
+  .address__subtext {
+    font: 400 18px/20px "BebasNeue", sans-serif;
+  }
   .logo__text {
     padding-top: 5px;
   }
@@ -805,7 +817,7 @@ a:hover, a:focus {
     -webkit-transform: rotate(18deg);
         -ms-transform: rotate(18deg);
             transform: rotate(18deg);
-    height: 54%;
+    height: 55%;
   }
 }
 
@@ -1637,7 +1649,7 @@ a:hover, a:focus {
   padding: 0 15px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 760px) {
   .table__heading {
     font: 600 16px/18px "Roboto", sans-serif;
   }
@@ -1658,5 +1670,99 @@ a:hover, a:focus {
   }
   .modal__photo {
     padding: 0 100px;
+  }
+}
+
+/* ---------------------------------------- */
+/* S U C C E S S    P A G E    S T Y L E    */
+/* ---------------------------------------- */
+.success {
+  padding: 40px 0;
+  background: url(../img/successbg.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.success__heading {
+  font: 600 32px/40px "BebasNeue", sans-serif;
+  color: #101010;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.success__subheading {
+  font: 300 24px/30px "Roboto", sans-serif;
+  color: #101010;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.success__img {
+  text-align: center;
+}
+
+.success__img img {
+  display: inline-block;
+}
+
+.success__info {
+  position: relative;
+}
+
+.success__info:before {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border: 15px solid rgba(51, 102, 153, 0.2);
+  height: 150px;
+  width: 150px;
+  line-height: 110px;
+  top: 0;
+  left: 50%;
+  margin-left: -75px;
+  text-align: center;
+  content: '\f00c';
+  display: inline-block;
+  position: absolute;
+  font-size: 50px;
+  color: rgba(51, 102, 153, 0.2);
+  font-family: "FontAwesome";
+}
+
+@media only screen and (min-width: 760px) {
+  .success__heading {
+    font: 600 50px/60px "BebasNeue", sans-serif;
+    text-align: left;
+  }
+  .success__subheading {
+    text-align: left;
+    margin: 0;
+  }
+  .success__info:before {
+    left: 0;
+    border: 30px solid rgba(51, 102, 153, 0.2);
+    font-size: 80px;
+    line-height: 100px;
+    margin-left: -100px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .success {
+    padding-top: 100px;
+  }
+  .success__img {
+    position: relative;
+    top: -50px;
+  }
+  .success__heading {
+    font: 600 60px/64px "BebasNeue", sans-serif;
+  }
+  .success__info:before {
+    height: 250px;
+    width: 250px;
+    line-height: 200px;
+    font-size: 150px;
+    margin-left: -140px;
+    margin-top: -50px;
   }
 }

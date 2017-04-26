@@ -189,6 +189,11 @@ a
   &__icon
     margin-right: 5px   
 +r(760)
+  .address
+    &__text
+      font: 600 18px/20px $main-font-bebas 
+    &__subtext
+      font: 400 16px/18px $main-font-bebas  
   .contact
     padding-top: 15px
     &__number
@@ -199,6 +204,11 @@ a
       &--text
         font: 300 16px/18px $main-font-roboto   
 +r(992)  
+  .address
+    &__text
+      font: 600 20px/24px $main-font-bebas 
+    &__subtext
+      font: 400 18px/20px $main-font-bebas  
   .logo
     &__text
       padding-top: 5px
@@ -334,7 +344,7 @@ a
       transform: rotate(-17deg) 
     &:after
       transform: rotate(18deg)
-      height: 54%  
+      height: 55%  
 +comment("intro style")      
 .intro
   padding: 40px 0 0
@@ -893,7 +903,7 @@ a
     padding: 0 10px         
   &__photo
     padding: 0 15px  
-+r(768)
++r(760)
   .table
     &__heading
       font: 600 16px/18px $main-font-roboto
@@ -910,4 +920,73 @@ a
     &__head-name
       padding: 0 100px
     &__photo
-      padding: 0 100px          
+      padding: 0 100px 
++comment("success page style") 
+.success
+  padding: 40px 0
+  background: url(../img/successbg.png) no-repeat
+  background-size: cover
+  background-position: center       
+  &__heading
+    font: 600 32px/40px $main-font-bebas
+    color: $main-text-color
+    margin-bottom: 20px
+    text-align: center
+  &__subheading  
+    font: 300 24px/30px $main-font-roboto   
+    color: $main-text-color
+    text-align: center
+    margin-bottom: 20px
+  &__img
+    text-align: center
+    img
+      display: inline-block  
+  &__info
+    position: relative
+    &:before
+      border-radius: 50%
+      border: 15px solid rgba(51,102,153,0.2)
+      height: 150px
+      width: 150px
+      line-height: 110px
+      top: 0
+      left: 50%
+      margin-left: -75px
+      text-align: center
+      content: '\f00c'  
+      display: inline-block
+      position: absolute
+      font-size: 50px
+      color: rgba(51,102,153,0.2) 
+      font-family: $font-awesome
++r(760)
+  .success
+    &__heading     
+      font: 600 50px/60px $main-font-bebas
+      text-align: left
+    &__subheading
+      text-align: left
+      margin: 0
+    &__info
+      &:before
+        left: 0  
+        border: 30px solid rgba(51,102,153,0.2)
+        font-size: 80px
+        line-height: 100px
+        margin-left: -100px  
++r(992)
+  .success
+    padding-top: 100px
+    &__img
+      position: relative
+      top: -50px  
+    &__heading     
+      font: 600 60px/64px $main-font-bebas 
+    &__info
+      &:before
+        height: 250px
+        width: 250px
+        line-height: 200px
+        font-size: 150px 
+        margin-left: -140px
+        margin-top: -50px      

@@ -64,4 +64,11 @@
     $("a.fancyimage").fancybox(); 
   };
 
+  $(document).ready( function() {
+    var $navbarHeight = $('.navbar').height(),
+        $windowHeight = $(window).height(),
+        $deltaHeight = $windowHeight - $navbarHeight;
+    $('.success').css('min-height',  $deltaHeight + 'px');
+  });
+
 })(jQuery); // End of use strict

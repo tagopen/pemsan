@@ -1,0 +1,13 @@
+.success
+  .container
+    .row
+      .col-xs-12.col-sm-8.col-md-7
+        .row
+          .col-xs-12.col-sm-10.col-sm-offset-2.col-md-9.col-md-offset-3
+            .success__info
+              .success__heading!=content.success.content.heading 
+              .success__subheading!=content.success.content.subheading
+      .col-xs-12.col-sm-4.col-md-5
+        .success__img
+          img.img-responsive(src=content.success.content.img.src, alt=content.success.content.img.alt)
+          
