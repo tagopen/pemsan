@@ -28,3 +28,6 @@ section.catalog
                   span.product__cost.product__cost--price!= product.price
                 .product__btn-group
                   btn.btn.button.product__btn(data-toggle='modal', data-target='#modal__product_' + (i +1))!= product.btn
+        if (i === 5)
+          .col-xs-12
+            button.btn.btn-default More
