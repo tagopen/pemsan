@@ -55,6 +55,12 @@
         remove: false
       });
 
+      $('.product__photo').matchHeight({
+        byRow: true,
+        property: 'height',
+        target: null,
+        remove: false
+      });
 
     }
   });

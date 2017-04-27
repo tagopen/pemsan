@@ -32,7 +32,7 @@ each product, i in content.index.catalog.products
           h2.heading.heading--product-320.modal__head-name!= product.name
           each photo in product.characteristic.img
             .modal__photo
-              img.img-responsive.modal__img(src=content.site.hostname + '/img/' + photo.src, alt= photo.alt)     
+              img.img-responsive.modal__img(src=content.site.hostname + 'img/' + photo.src, alt= photo.alt)     
           .table-responsive
             table.table.table-striped
               thead.table__head

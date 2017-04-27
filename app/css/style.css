@@ -462,7 +462,7 @@ a:hover, a:focus {
 
 @media only screen and (min-width: 760px) {
   .modal-lg {
-    width: 700px;
+    width: 760px;
   }
   .modal__heading {
     font: 600 30px/40px "BebasNeue", sans-serif;
@@ -955,6 +955,11 @@ a:hover, a:focus {
 
 .product__photo {
   margin-bottom: 25px;
+  text-align: center;
+}
+
+.product__photo img {
+  display: inline-block;
 }
 
 .product__name {
