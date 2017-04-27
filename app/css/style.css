@@ -403,6 +403,17 @@ a:hover, a:focus {
   width: 100%;
 }
 
+.button__show {
+  display: inline-block;
+  font: 600 20px/22px "Roboto", sans-serif;
+  color: #101010;
+  margin-bottom: 30px;
+}
+
+.button__show:hover, .button__show:focus {
+  color: red;
+}
+
 @media only screen and (min-width: 992px) {
   .button--margin {
     margin-top: 30px;
@@ -1226,7 +1237,8 @@ a:hover, a:focus {
 
 @media only screen and (min-width: 760px) {
   .advantages {
-    padding-top: 50px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
   .advantages__container {
     position: relative;
@@ -1351,6 +1363,10 @@ a:hover, a:focus {
 }
 
 @media only screen and (min-width: 760px) {
+  .delivery {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
   .delivery__text {
     margin-bottom: 30px;
   }
@@ -1364,7 +1380,8 @@ a:hover, a:focus {
 
 @media only screen and (min-width: 992px) {
   .delivery {
-    padding-top: 50px;
+    padding-top: 100px;
+    padding-bottom: 80px;
   }
   .delivery__text {
     margin-bottom: 60px;

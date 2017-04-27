@@ -21,6 +21,9 @@
     });
   });
 
+  // Masked phone
+  $(".form__phone").mask("+38(999)999-99-99");
+
   $(function() {
     if( $( window ).width() >= 768 ) {
       /*  intro equal height*/
@@ -63,6 +66,28 @@
       });
 
     }
+
+    $(document).ready( function() {
+      $('.catalog__col').slice(6, 21).hide();
+    });
+
+    $(document).ready(function(){
+      $('.button__show').click( function () {
+        $('.button__show').hide();
+        $('.catalog__col').slice(6, 21).fadeIn( "slow", function() {
+        });
+      });
+    }); 
+
+    if( ($( window ).width() >= 760) && ($( window ).width() < 960) ) {
+      $(document).ready( function() {
+        var numberCatalog = $('.catalog__col');
+        if (numberCatalog.length % 2 === 1) {
+          $('.catalog__col').slice(-1).addClass('col-sm-offset-3 col-md-offset-0');
+        }
+      });
+    }
+
   });
 
   // Fancy Box

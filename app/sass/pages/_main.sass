@@ -62,7 +62,15 @@ a
     color: $main-text-color 
     background: rgba(255,162,0,1)
   &--size
-    width: 100%   
+    width: 100%  
+  &__show
+    display: inline-block
+    font: 600 20px/22px $main-font-roboto
+    color: $main-text-color 
+    margin-bottom: 30px
+    &:hover,
+    &:focus
+      color: red
 +r(992)
   .button
     &--margin
@@ -612,7 +620,8 @@ a
       height: 21px            
 +r(760)
   .advantages
-    padding-top: 50px
+    padding-top: 80px 
+    padding-bottom: 80px
     &__container
       position: relative
     &__image
@@ -693,6 +702,8 @@ a
     display: inline-block  
 +r(760)    
   .delivery
+    padding-top: 80px
+    padding-bottom: 50px
     &__text
       margin-bottom: 30px
     &__img
@@ -702,7 +713,8 @@ a
       margin-bottom: 15px    
 +r(992)
   .delivery
-    padding-top: 50px  
+    padding-top: 100px  
+    padding-bottom: 80px
     &__text
       margin-bottom: 60px
     &__group

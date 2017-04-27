@@ -15,7 +15,7 @@
                   input.form-control.form__input.form__input--dark.form__name(aria-invalid='false', placeholder='Укажите Ваше Имя', required, data-validation-required-message='Заполните поле корректно.', name='email', type='text')    
                 .form-group.col-xs-12
                   .input__heading.input__heading--dark Укажите Ваш Телефон
-                  input.form-control.form__input.form__input--dark.form__phone(aria-invalid='false', placeholder='Укажите Ваш Телефон', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='phone')   
+                  input.form-control.form__input.form__input--dark.form__phone(aria-invalid='false', placeholder='+38(___)___-__-__', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='phone')   
                 .col-xs-12    
                   .text-center
                     button.btn.button.button--size(name='form[навбар]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") ПЕРЕЗВОНИТЕ МНЕ
@@ -56,13 +56,13 @@ each product, i in content.index.catalog.products
                 form.contactForm.modal__form(method='post', action='./mail/mail.php')
                   .row
                     .form-group.col-xs-12.col-sm-6.col-md-4
-                      .input__heading.input__heading--dark Укажите Ваше Имя
-                      input.form-control.form__input.form__input--dark.form__name(aria-invalid='false', placeholder='Укажите Ваше Имя', required, data-validation-required-message='Заполните поле корректно.', name='email', type='text')    
-                    .form-group.col-xs-12.col-sm-6.col-md-4
                       .input__heading.input__heading--dark Укажите Ваш Телефон
-                      input.form-control.form__input.form__input--dark.form__phone(aria-invalid='false', placeholder='Укажите Ваш Телефон', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='phone')   
+                      input.form-control.form__input.form__input--dark.form__phone(aria-invalid='false', placeholder='+38(___)___-__-__', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='phone')   
+                    .form-group.col-xs-12.col-sm-6.col-md-4
+                      .input__heading.input__heading--dark Укажите Ваше Имя
+                      input.form-control.form__input.form__input--dark.form__name(aria-invalid='false', placeholder='Укажите Ваше Имя', required, data-validation-required-message='Заполните поле корректно.', name='email', type='text')  
                     .col-xs-12.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-0    
                       .text-center
-                        button.btn.button.button--size.button--margin(name='form[навбар]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") ПЕРЕЗВОНИТЕ МНЕ
+                        button.btn.button.button--size.button--margin(name='form[навбар]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")!= product.btn
 
 

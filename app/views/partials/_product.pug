@@ -5,7 +5,7 @@ section.catalog
         h2.heading.catalog__heading!= content.index.catalog.heading
     .row
       each product, i in content.index.catalog.products
-        .col-xs-12.col-sm-6.col-md-4
+        .col-xs-12.col-sm-6.col-md-4.catalog__col
           .product
             .product__photo
               img.product__img.img-responsive(src= content.site.hostname + 'img/' + product.img.src, alt= product.img.alt)
@@ -15,7 +15,7 @@ section.catalog
                 each item in product.size
                   .option__item
                     .row
-                      .col-xs-10.col-xs-offset-1.col-md-8.col-md-offset-2
+                      .col-xs-10.col-xs-offset-1.col-lg-8.col-lg-offset-2
                         .row
                           .col-xs-2
                             i.ic.option__icon(class= item.icon)
@@ -29,5 +29,5 @@ section.catalog
                 .product__btn-group
                   btn.btn.button.product__btn(data-toggle='modal', data-target='#modal__product_' + (i +1))!= product.btn
         if (i === 5)
-          .col-xs-12
-            button.btn.btn-default More
+          .col-xs-12.text-center
+            a.btn.button__show Показать весь список
