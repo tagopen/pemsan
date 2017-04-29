@@ -9,6 +9,6 @@
         .contact.footer__contact
           a.contact__link(href=content.index.nav.contact.href)  
             .contact__number.contact__number--big!=content.index.nav.contact.number 
-          a.contact__btn
+          a.contact__btn(data-toggle="modal" data-target="#nav__modal")
             i.contact__icon.fa.fa-phone
-            a.contact__btn--text(data-toggle="modal" data-target="#nav__modal")!=content.index.nav.contact.text
+            .contact__btn--text!=content.index.nav.contact.text

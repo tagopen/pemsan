@@ -6,7 +6,7 @@ nav.navbar
           .row
             .col-xs-12.col-md-5
               a.logo__link(href=content.index.nav.logo.href)  
-                img.img-responsive.logo__img(src=content.site.hostname + "img/logo/" + content.index.nav.logo.img.link, alt=content.index.nav.logo.alt)
+                img.img-responsive.logo__img(src=content.site.hostname + "img/logo/" + content.index.nav.logo.img.link, alt=content.index.nav.logo.img.alt)
             .hidden-xs.col-sm-12.col-md-7     
               .logo__text!=content.index.nav.text   
       .hidden-xs.col-sm-4.col-md-4.col-lg-offset-1.text-center        
@@ -20,9 +20,9 @@ nav.navbar
           a.contact__link(href=content.index.nav.contact.href)  
             .contact__number!=content.index.nav.contact.number 
           if (relativePath !== "success")     
-            a.contact__btn
+            a.contact__btn(data-toggle="modal" data-target="#nav__modal")
               i.contact__icon.fa.fa-phone
-              a.contact__btn--text(data-toggle="modal" data-target="#nav__modal")!=content.index.nav.contact.text
+              .contact__btn--text!=content.index.nav.contact.text
           else
-            a.contact__btn--text(href=content.site.hostname + "/") На главную
+            a.contact__btn--text(href=content.site.hostname + "./") На главную
             

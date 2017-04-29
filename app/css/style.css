@@ -218,45 +218,45 @@
 }
 
 .ic--a4_1:before {
-  width: 397px;
+  width: 330px;
   height: 306px;
-  background: url(../img/sprite.png) 0px -440px no-repeat;
+  background: url(../img/sprite.png) -772px 0px no-repeat;
 }
 
 .ic--a4_2:before {
   width: 221px;
   height: 279px;
-  background: url(../img/sprite.png) -772px -313px no-repeat;
+  background: url(../img/sprite.png) -772px -316px no-repeat;
 }
 
 .ic--a4_3:before {
   width: 184px;
   height: 216px;
-  background: url(../img/sprite.png) 0px -756px no-repeat;
+  background: url(../img/sprite.png) 0px -753px no-repeat;
 }
 
 .ic--address:before {
   width: 40px;
   height: 45px;
-  background: url(../img/sprite.png) -1003px -527px no-repeat;
+  background: url(../img/sprite.png) -1003px -548px no-repeat;
 }
 
 .ic--angle:before {
   width: 16px;
   height: 15px;
-  background: url(../img/sprite.png) -1089px -477px no-repeat;
+  background: url(../img/sprite.png) -1071px -444px no-repeat;
 }
 
 .ic--arrow-md:before {
   width: 76px;
   height: 40px;
-  background: url(../img/sprite.png) -1003px -477px no-repeat;
+  background: url(../img/sprite.png) -1003px -498px no-repeat;
 }
 
 .ic--arrow-sm:before {
   width: 58px;
   height: 68px;
-  background: url(../img/sprite.png) -1107px -313px no-repeat;
+  background: url(../img/sprite.png) -1003px -420px no-repeat;
 }
 
 .ic--box:before {
@@ -268,49 +268,49 @@
 .ic--intime:before {
   width: 196px;
   height: 83px;
-  background: url(../img/sprite.png) -772px -602px no-repeat;
+  background: url(../img/sprite.png) -772px -605px no-repeat;
 }
 
 .ic--intro-1:before {
   width: 94px;
   height: 94px;
-  background: url(../img/sprite.png) -1003px -313px no-repeat;
+  background: url(../img/sprite.png) -1003px -316px no-repeat;
 }
 
 .ic--intro-2:before {
   width: 139px;
   height: 50px;
-  background: url(../img/sprite.png) -1003px -417px no-repeat;
+  background: url(../img/sprite.png) -612px -440px no-repeat;
 }
 
 .ic--nova:before {
   width: 189px;
   height: 68px;
-  background: url(../img/sprite.png) -978px -602px no-repeat;
+  background: url(../img/sprite.png) -194px -753px no-repeat;
 }
 
 .ic--papka-sm:before {
   width: 395px;
   height: 303px;
-  background: url(../img/sprite.png) -772px 0px no-repeat;
+  background: url(../img/sprite.png) 0px -440px no-repeat;
 }
 
 .ic--papka-xs:before {
   width: 197px;
   height: 303px;
-  background: url(../img/sprite.png) -407px -440px no-repeat;
+  background: url(../img/sprite.png) -405px -440px no-repeat;
 }
 
 .ic--protractor:before {
   width: 20px;
   height: 14px;
-  background: url(../img/sprite.png) -1107px -391px no-repeat;
+  background: url(../img/sprite.png) -1071px -420px no-repeat;
 }
 
 .ic--trammel:before {
   width: 16px;
   height: 14px;
-  background: url(../img/sprite.png) -1137px -391px no-repeat;
+  background: url(../img/sprite.png) -1071px -469px no-repeat;
 }
 
 a {

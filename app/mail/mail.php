@@ -84,7 +84,7 @@
   $mail->IsSendmail();
 
   $from = 'no-reply@tagopen.com';
-  $to = "Artem2431@gmail.com";
+  $to = "marchik88@rambler.ru";
   $mail->SetFrom($from, HOST_NAME);
   $mail->AddAddress($to, 'Name Surname');
 
@@ -98,7 +98,7 @@
     echo 'Что-то пошло не так. ' . $mail->ErrorInfo;
     return false;
   } else {
-    echo 'Сообщение отправлено';
+    header("Location: ../success.html");
     return true;
   }
 
