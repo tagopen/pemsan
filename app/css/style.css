@@ -486,7 +486,7 @@ a:hover, a:focus {
 
 @media only screen and (min-width: 992px) {
   .modal-lg {
-    width: 900px;
+    width: 992px;
   }
 }
 
@@ -838,7 +838,8 @@ a:hover, a:focus {
     -webkit-transform: rotate(18deg);
         -ms-transform: rotate(18deg);
             transform: rotate(18deg);
-    height: 55%;
+    height: 54%;
+    bottom: -7px;
   }
 }
 
@@ -1708,6 +1709,28 @@ a:hover, a:focus {
   }
   .table__row .table__data:last-child {
     padding-right: 80px;
+  }
+  .table-responsive {
+    position: relative;
+  }
+  .table__icon {
+    position: absolute;
+    color: #c0c0c0;
+  }
+  .table__icon--1 {
+    left: -5px;
+    top: -22px;
+    font-size: 130px;
+  }
+  .table__icon--2 {
+    left: 85px;
+    top: 60px;
+    font-size: 20px;
+  }
+  .table__icon--3 {
+    left: 100px;
+    top: 45px;
+    font-size: 18px;
   }
   .modal__head-name {
     padding: 0 80px;

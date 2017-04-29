@@ -118,7 +118,7 @@ a
 +r(992)
   .modal
     &-lg
-      width: 900px         
+      width: 992px         
 +r(1200)
   .modal
     &-lg
@@ -358,7 +358,8 @@ a
       transform: rotate(-17deg) 
     &:after
       transform: rotate(18deg)
-      height: 55%  
+      height: 54%  
+      bottom: -7px
 +comment("intro style")      
 .intro
   padding: 40px 0 0
@@ -946,7 +947,24 @@ a
       .table__data:nth-child(1)
         padding-left: 80px 
       .table__data:last-child
-        padding-right: 80px     
+        padding-right: 80px  
+    &-responsive
+      position: relative      
+    &__icon
+      position: absolute 
+      color: #c0c0c0
+      &--1
+        left: -5px
+        top: -22px
+        font-size: 130px
+      &--2
+        left: 85px
+        top: 60px
+        font-size: 20px
+      &--3
+        left: 100px
+        top: 45px
+        font-size: 18px    
   .modal
     &__head-name
       padding: 0 80px
