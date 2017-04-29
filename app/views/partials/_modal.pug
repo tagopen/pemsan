@@ -11,7 +11,7 @@
             .row
               .form-group.col-xs-12
                 .input__heading.input__heading--dark Укажите Ваше Имя
-                input.form-control.form__input.form__input--dark.form__name(aria-invalid='false', placeholder='Укажите Ваше Имя', required, data-validation-required-message='Заполните поле корректно.', name='email', type='text')    
+                input.form-control.form__input.form__input--dark.form__name(aria-invalid='false', placeholder='Укажите Ваше Имя', required, data-validation-required-message='Заполните поле корректно.', name='name', type='text')    
               .form-group.col-xs-12
                 .input__heading.input__heading--dark Укажите Ваш Телефон
                 input.form-control.form__input.form__input--dark.form__phone(aria-invalid='false', placeholder='+38(___)___-__-__', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')   
@@ -31,7 +31,7 @@ each product, i in content.index.catalog.products
           h2.heading.heading--product-320.modal__head-name!= product.name
           each photo in product.characteristic.img
             .modal__photo
-              img.img-responsive.modal__img(src=content.site.hostname + 'img/' + photo.src, alt= photo.alt)     
+              img.img-responsive.modal__img(src=content.site.hostname + 'img/' + photo.src, alt= photo.alt)    
           .table-responsive
             table.table.table-striped
               thead.table__head
@@ -41,8 +41,8 @@ each product, i in content.index.catalog.products
                     th.table__heading!= head
               tbody
                 each body, j in product.characteristic.table.body
-                  tr
-                    th(scope="row") 
+                  tr.table__row
+                    td.table__data(scope="row") 
                       .table__radio-group.radio-btn
                         input.table__radio-input(id="product-" + (i + 1) + '_' + (j + 1), type='checkbox', name= 'form[characteristic][' + body.article +']')
                         label.table__radio-label.table__radio-label--check(for='product-' + (i + 1) + '_' + (j + 1), tabindex="0")
@@ -58,7 +58,7 @@ each product, i in content.index.catalog.products
                     input.form-control.form__input.form__input--dark.form__phone(aria-invalid='false', placeholder='+38(___)___-__-__', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')   
                   .form-group.col-xs-12.col-sm-6.col-md-4
                     .input__heading.input__heading--dark Укажите Ваше Имя
-                    input.form-control.form__input.form__input--dark.form__name(aria-invalid='false', placeholder='Укажите Ваше Имя', required, data-validation-required-message='Заполните поле корректно.', name='email', type='text')  
+                    input.form-control.form__input.form__input--dark.form__name(aria-invalid='false', placeholder='Укажите Ваше Имя', required, data-validation-required-message='Заполните поле корректно.', name='name', type='text')  
                   .col-xs-12.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-0    
                     .text-center
                       button.btn.button.button--size.button--margin(name='form[навбар]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")!= product.btn
