@@ -1622,8 +1622,11 @@ a:hover, a:focus {
 /* P R O D U C T    M O D A L    S T Y L E  */
 /* ---------------------------------------- */
 .table__head {
-  height: 90px;
   background-color: #ececec;
+}
+
+.table__head-row {
+  height: 90px;
   line-height: 90px;
 }
 
