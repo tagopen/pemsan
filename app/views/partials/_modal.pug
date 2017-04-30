@@ -44,14 +44,21 @@ each product, i in content.index.catalog.products
                     th.table__heading!= head
               tbody
                 each body, j in product.characteristic.table.body
-                  tr.table__row
-                    td.table__data(scope="row") 
-                      .table__radio-group.radio-btn
-                        input.table__radio-input(id="product-" + (i + 1) + '_' + (j + 1), type='checkbox', name= 'form[characteristic][' + body.article +']')
-                        label.table__radio-label.table__radio-label--check(for='product-' + (i + 1) + '_' + (j + 1), tabindex="0")
-                          span.table__radio-icon
-                    each value, key in body
-                      td.table__data!= value
+                  unless (body.images)
+                    tr.table__row
+                      td.table__data(scope="row") 
+                        .table__radio-group.radio-btn
+                          input.table__radio-input(id="product-" + (i + 1) + '_' + (j + 1), type='checkbox', name= 'form[characteristic][' + body.article +']')
+                          label.table__radio-label.table__radio-label--check(for='product-' + (i + 1) + '_' + (j + 1), tabindex="0")
+                            span.table__radio-icon
+                      each value, key in body
+                        td.table__data!= value
+                  else
+                    tr.table__row
+                      td.table__data.table__data--white(colspan='100')
+                        each img in body.images
+                          .modal__photo
+                            img.img-responsive.modal__img(src= content.site.hostname + '/img/' + img.src, alt= img.alt)
           form.contactForm.modal__form(method='post', action='./mail/mail.php')
             .row
               .col-xs-10.col-xs-offset-1
