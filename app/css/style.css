@@ -1646,6 +1646,11 @@ a:hover, a:focus {
   background: #fff;
 }
 
+.table__radio-label {
+  outline: none;
+  margin: 0;
+}
+
 .table__radio-input {
   display: none;
 }
@@ -1686,7 +1691,7 @@ a:hover, a:focus {
 }
 
 .modal__photo {
-  margin: 0 auto;
+  margin: 20px auto 20px;
   padding: 0 15px;
 }
 
@@ -1745,6 +1750,9 @@ a:hover, a:focus {
   }
   .modal__photo {
     padding: 0 80px;
+  }
+  .modal__photo--no-padding {
+    padding: 0;
   }
   .modal__box {
     position: relative;

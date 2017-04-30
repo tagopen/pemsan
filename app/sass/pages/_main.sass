@@ -896,6 +896,9 @@ a
     &--white
       background: #fff
   &__radio
+    &-label
+      outline: none
+      margin: 0
     &-input
       display: none     
       &:checked+.table__radio-label
@@ -927,7 +930,7 @@ a
   &__head-name
     padding: 0 10px         
   &__photo
-    margin: 0 auto
+    margin: 20px auto 20px
     padding: 0 15px  
 +r(760)
   .table
@@ -937,7 +940,7 @@ a
     &__head-name
       padding: 0 50px
     &__photo
-      padding: 0 50px      
+      padding: 0 50px     
 +r(1200)
   .table
     &__heading
@@ -974,6 +977,8 @@ a
       padding: 0 80px
     &__photo
       padding: 0 80px
+      &--no-padding
+        padding: 0
     &__box
       position: relative
       padding: 0 80px 
