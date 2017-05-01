@@ -15,18 +15,27 @@
   } else {
     $host_name = $http_host;
   }
+  if (isset($_SERVER['HTTP_REFERER'])) {
+    $http_referer = $_SERVER['HTTP_REFERER'];
+  } else {
+    $http_referer = '';
+  }
 
   define ('HTTP_SERVER', 'http://' . $http_host . '/');
   define ('HOST_NAME', $host_name);
+  define ('HTTP_REFERER', $http_referer);
 
   $post = array( 
     'host_name'     => HOST_NAME,
     'host_dir'      => HTTP_SERVER,
+    'host_referer'  => HTTP_REFERER
     );
 
   if (!empty($_POST["form"])) {
-    $post['user_form'] = filter_input(INPUT_POST, 'form', FILTER_SANITIZE_EMAIL);
-    $body .= 'Заявка с формы: ' . $post['user_form'] . chr(10) . chr(13);
+    foreach( $_POST["form"] as $key => $value) { 
+      $post['user_form'] = $key;
+      $body .= 'Форма: ' . $post['user_form'] . chr(10) . chr(13);
+    }
   }
 
   if (!empty($_POST["email"])) {
@@ -49,6 +58,25 @@
     $body .= 'Сообщение: ' . $post['user_message'] . chr(10) . chr(13);
   }
 
+  if (!empty($_POST["product_name"])) {
+    foreach( $_POST["product_name"] as $key => $value){ 
+      $post['product_name'] = $key;
+      $body .= 'Название товара: ' . $post['product_name'] . chr(10) . chr(13);
+    }
+  }
+
+  if (!empty($_POST["product_article"])) {
+    $first_key = reset($_POST["product_article"]);
+    $body .= 'Артикулы: ';
+    foreach( $_POST["product_article"] as $key => $value){ 
+      $post['product_article'] = $key;
+      $body .= $post['product_article'] . ' ';
+    }
+    $body .=  chr(10) . chr(13);
+  }
+
+  $body .= chr(10) . chr(13) . "С уважением," . chr(10) . chr(13) . "разработчики сайта " . $post['host_referer'];
+
 
   $mail = new PHPMailer();
 
@@ -63,7 +91,7 @@
 
   $mail->isHTML(false);
 
-  $mail->Subject      = "Новая заявка с сайта";
+  $mail->Subject      = "Новая заявка";
   $mail->Body         = $body;
 
   if(!$mail->send()) {
@@ -73,5 +101,4 @@
     header("Location: ../success.html");
     return true;
   }
-
 ?>
