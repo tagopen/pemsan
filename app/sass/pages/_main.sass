@@ -57,6 +57,8 @@ a
   text-align: center
   white-space: normal
   font: 600 20px/30px $main-font-bebas
+  &--c
+    margin: 20px 0
   &:hover,
   &:focus
     color: $main-text-color 
@@ -113,8 +115,24 @@ a
     &__heading  
       font: 600 30px/40px $main-font-bebas 
       margin-bottom: 40px 
+      padding: 0 40px
     &__close
       font-size: 30px 
+    &__content
+      position: relative 
+      z-index: 25 
+      padding: 40px 0
+  .ic
+    &__b-modal
+      position: absolute  
+      z-index: 20 
+    &--b_modal
+      &_l
+        left: -128px
+        top: 10px
+      &_r
+        right: -111px
+        top: 30px   
 +r(992)
   .modal
     &-lg
@@ -124,7 +142,7 @@ a
     &-lg
       width: 1200px  
     &__close
-      font-size: 50px            
+      font-size: 40px            
 .form
   &__input
     padding: 19px 10px 18px 10px
@@ -243,16 +261,27 @@ a
   background-position: center
   background-size: cover
   overflow: hidden
+  &__d
+    background: url(../img/headerc.jpg) no-repeat 
+    background-position: center
+    background-size: cover
+    padding: 0
+    &-col
+      background: url(../img/headercbg.jpg) no-repeat 
+      background-position: center
+      background-size: cover
+      padding-top: 30px
+      padding-bottom: 30px
   &__form
     position: relative
     z-index: 10
-    margin: 0 auto
+    margin: 20px auto 0
     max-width: 320px
     .ic
       &__papka
         position: absolute
         top: 90px
-        right: -15px
+        right: -15px  
 .title
   position: relative
   padding: 18px 10px
@@ -283,13 +312,18 @@ a
     font: 400 30px/36px $main-font-roboto
     color: #fff
     margin: 0 0 10px
+    text-transform: uppercase
+    &--color-dark
+      color: $main-text-color
   &__subheading
     font: 300 18px/24px $main-font-roboto
     color: #fff 
     margin: 0
     &--span
       font: 600 18px/24px $main-font-roboto
-      color: red             
+      color: red  
+    &--color-dark
+      color: $main-text-color           
 +r(480)     
   .title
     &:before,
@@ -300,6 +334,7 @@ a
     padding: 50px 0  
     &__form
       max-width: none
+      margin: 0 auto
       .ic
         &__papka
           top: 200px
@@ -308,6 +343,16 @@ a
           position: absolute  
           top: 320px
           left: 15px
+      &--b
+        padding-top: 100px    
+    &__d
+      background: url(../img/headercbgsm.jpg) no-repeat 
+      background-position: center
+      background-size: cover
+      &-col
+        padding-top: 0
+        padding-bottom: 0
+        background: none      
   .title
     padding: 25px 30px 25px 35px  
     &__heading
@@ -830,6 +875,49 @@ a
     margin-left: -18.4px
     margin-top: -20px  
     transition: all 0.3s ease
++comment("map style")
+.map
+  position: relative
+  height: 400px
+  padding: 70px 0 50px
+  &__iframe
+    position: absolute
+    left: 0
+    top: 0
+    height: 100%
+    width: 100%
+  &__box
+    background-color: #fff
+    padding: 50px 15px    
+    position: relative
+    &:after  
+      content: ''
+      position: absolute
+      right: -48px
+      top: 0
+      width: 0
+      height: 100%
+      border-style: solid
+      border-width: 110px 0 110px 50px
+      border-color: transparent transparent transparent #fff
+  &__address
+    margin-bottom: 50px   
+  &__text  
+    font: 400 18px/20px $main-font-roboto
+    color: $main-text-color
+  &__address,
+  &__number
+    position: relative
+    z-index: 30  
++r(760)
+  .map
+    padding: 110px 0   
+    height: 550px
+    &__text  
+      font: 400 22px/24px $main-font-roboto
++r(992)
+  .map
+    padding: 150px 0  
 +comment("footer style")
 .footer
   position: relative
