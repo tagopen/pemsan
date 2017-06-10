@@ -1,0 +1,2234 @@
+- var page = {}
+- var hostname = "" //- site domen name
+
+- 
+  var content = 
+    {
+      site: {
+        hostname: hostname, //- site domen name
+        author: "Tagopen",
+        meta: {
+          charset: "utf-8",
+          favicon: "favicon.png",
+          appleTouchIcon: "favicon.png"
+        },
+      }, //- site
+      success: {
+        hostname: "success.html",
+        title: "Заявка принята",
+        meta: {
+          description: "",
+          keywords: "",
+          openGraph: {
+            title: "Site name",
+            siteName: "Site name",
+            description: "Описание сайта",
+            type: "website",
+            locale: "ru_RU",
+            image: "microformat.png",
+            imageType: "image/png",
+            url: hostname
+          },
+          twitter: {
+            card: "summary",
+            site: "@flickr",
+            title: "My Site",
+            description: "My Site is cool",
+            image: hostname + "/img/logo/microformat.png"
+          }
+        },
+        content: {
+          heading: "Ваша заявка принята!",
+          subheading: "Наш менеджер свяжется с Вами в ближайшее время",
+          img: {
+            src: "img/succesimg.png",
+            alt: "Хомуты"
+          }
+        },
+      },
+      index: {
+        hostname: "index.html",
+        title: "Главная страница",
+        meta: {
+          description: "",
+          keywords: "",
+          openGraph: {
+            title: "Site name",
+            siteName: "Site name",
+            description: "Описание сайта",
+            type: "website",
+            locale: "ru_RU",
+            image: "microformat.png",
+            imageType: "image/png",
+            url: hostname
+          },
+          twitter: {
+            card: "summary",
+            site: "@flickr",
+            title: "My Site",
+            description: "My Site is cool",
+            image: hostname + "/img/logo/microformat.png"
+          }
+        },
+        nav: {
+          text: "Официальное представительство компании Pemsan в России",
+          logo: {
+            href: "",
+            img: {
+              link: "logo.png",
+              alt: "Логотип"
+            }
+          },
+          address: {
+            text: "Адресс:",
+            subtext: "Москва, Ленинский проспект 2, офис 509"
+          },
+          contact: {
+            number: "+7 (495) 203 2003",
+            href: "tel:+74952032003",
+            text: "Заказать звонок"
+          }
+        },
+        header: {
+          title: {
+            heading: "Производим хомуты, кабельные стяжки и ещё 35 видов крепежных изделий",
+            subheading: "Предлагаем цены на <span class=\"title__subheading title__subheading--span\">50%</span> ниже конкурентов, за счет собственного производства."
+          },
+          form: {
+            title: "Получите каталог с полным перечнем продукции, техническими характеристиками и ценами"
+          }
+        },
+        intro: {
+          heading: "Идеальное сочетание <span class=\"heading__span\">цены и качества</span>",
+          text: "Изделия компании Pemsan производятся в Турции и соответствуют всем европейским и международным стандартам. При этом цена товаров Pemsan ниже европейских аналогов, благодаря экономической поддержке данной сферы производства в Турции.",
+          answer: "RoHS (англ. Restriction of Hazardous Substances) — директива, ограничивающая содержание вредных веществ, была принята Европейским союзом в феврале 2003 года",
+          img: {
+            src: "img/intro-img.png",
+            alt: "Стяжки"
+          }
+        },  
+        properties: {
+          heading: "Технические <span class=\"heading__span\">характеристики товара</span>",
+          title: "Термостойкость всех хомутов<br> от <span class=\"properties__span properties__span--blue\">-60</span> до <span class=\"properties__span properties__span--red\">+85</span> градусов",
+          pointl: "+85",
+          pointr: "-60",
+          textl: "Не поддерживает процесс горения (классификация UL9A4 V-2)",
+          textr: "Не теряет свои свойства даже при экстремально низких температурах"
+        },
+        endurance: {
+          heading: "Предел прочности на разрыв соответствует и превосходит стандарт:",
+          text: "Это значит, что кабельные стяжки фирмы Pemsan нельзя разорвать руками и они будут прочно держаться даже в самых экстремальных ситуациях.",
+          img: {
+            src: "img/endurancetext.png",
+            alt: "Стандарт"
+          },
+          image: {
+            src: "img/endurance-img.png",
+            alt: "Стяжки"
+          }
+        },
+        advantages: {
+          heading1: "Гидроскопичность",
+          heading2: "Диэлектричен",
+          heading3: "Не содержит галогенов",
+          heading4: "Высокое сопротивление ",
+          text1: "Материал способен поглощать излишнюю влагу из окружающей среды. Уровень влажности материала влияет на прочность и жесткость хомутов.",
+          text2: "Материал устойчив к электропроводности. Этим обусловлено широкое применение изделий из нейлона в электротехнике.",
+          text3: "В отличии от более дешевых аналогов данный материал не содержит галогенов. Это пять токсичных элементов: фтор, хлор, бром, йод и астат. Которые, могут негативно влиять на здоровье человека при контакте с окружающей средой.",
+          text4: "К нефтяным продуктам, основаниям, маслам, смазочным материалам, хлоридным растворителям, морской воде, плесени, расширенным лёгким органическим кислотам и щелочам.",
+          img: {
+            src: "img/nylon.png",
+            alt: "Нейлон"
+          },
+          img2: {
+            src: "img/nylon-lg.png"
+          }
+        },
+        experience: {
+          heading: "Опыт говорит <span class=\"heading__span\">сам за себя</span>",
+          text: "Компания Pemsan работает с <span class=\"experience__span\">1982 ГОДА</span>",
+          subtext: "Товары компании продаются на территории <b>Турции, России и других стран СНГ</b>"
+        },
+        delivery: {
+          heading: "Доставка",
+          text: "Доставка по всей России осуществляется в течении <b>3 - 14 дней</b> любым удобным для Вас способом",
+          image: {
+            src: "img/deliveryimg.png",
+            alt: "Газель"
+          }
+        },
+        contact: {
+          heading: "Оставьте свой E-Mail",
+          text: "и получите полный каталог всех видов крепежных изделий компании PEMSAN <b>с актуальными ценами на 2017 год</b>"
+        },
+        sertificate: {
+          heading: "Сертификаты"
+        },
+        map: {
+          address: "Москва, Ленинский проспект 2, офис 509",
+          number: "+7(495)2032003"
+        },
+        footer: {
+          heading: "есть дополнительные вопросы или нужна консультация?",
+          text: "Позвоните нам или закажите обратный звонок"
+        },
+        catalog: {
+          heading: "Каталог продукции",
+          products: [
+            {
+              img: {
+                src: "product1.jpg",
+                alt: "Стандартные кабельные стяжки"
+              },
+              name: "Стандартные кабельные стяжки",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 2.5 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 10 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 22 мм."
+                },
+              ],
+              price: '0.34 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal1-1.jpg",
+                    alt: "Стандартные кабельные стяжки"
+                  },
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "Ширина (мм)",
+                    "Длина (мм)",
+                    "Макс. Диаметр охвата (мм)",
+                    "Мин. Предел прочности (кг)",
+                    "Тип",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "EB.02.202",
+                      width: "2,5",
+                      long: "100",
+                      diametr: "22",
+                      strength: "12",
+                      type: "Изогнутый",
+                      countinpack: "1.000",
+                      countinBox: "80.000",
+                      priceperone: "0,34 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EB.12.212",
+                      width: "2,5",
+                      long: "140",
+                      diametr: "35",
+                      strength: "12",
+                      type: "Изогнутый",
+                      countinpack: "100",
+                      countinBox: "50.000",
+                      priceperone: "0,50 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EB.13.213",
+                      width: "2,5",
+                      long: "200",
+                      diametr: "54",
+                      strength: "12",
+                      type: "Изогнутый",
+                      countinpack: "100",
+                      countinBox: "35.000",
+                      priceperone: "0,76 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EB.23.223",
+                      width: "3,6",
+                      long: "100",
+                      diametr: "21",
+                      strength: "18",
+                      type: "Изогнутый",
+                      countinpack: "250",
+                      countinBox: "60.000",
+                      priceperone: "0,67 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EB.03.203",
+                      width: "3,6",
+                      long: "150",
+                      diametr: "36",
+                      strength: "18",
+                      type: "Изогнутый",
+                      countinpack: "100",
+                      countinBox: "30.000",
+                      priceperone: "0,76 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EB.04.204",
+                      width: "3,6",
+                      long: "150",
+                      diametr: "36",
+                      strength: "18",
+                      type: "Изогнутый",
+                      countinpack: "100",
+                      countinBox: "25.000",
+                      priceperone: "1,01 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EB.09.209",
+                      width: "3,6",
+                      long: "250",
+                      diametr: "68",
+                      strength: "18",
+                      type: "Изогнутый",
+                      countinpack: "100",
+                      countinBox: "22.500",
+                      priceperone: "1,34 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EB.10.210",
+                      width: "3,6",
+                      long: "300",
+                      diametr: "81",
+                      strength: "18",
+                      type: "Изогнутый",
+                      countinpack: "100",
+                      countinBox: "17.500",
+                      priceperone: "1,60 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EB.11.211",
+                      width: "3,6",
+                      long: "370",
+                      diametr: "102",
+                      strength: "18",
+                      type: "Прямой",
+                      countinpack: "100",
+                      countinBox: "17.500",
+                      priceperone: "2,02 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EB.14.214",
+                      width: "4,8",
+                      long: "200",
+                      diametr: "50",
+                      strength: "25",
+                      type: "Изогнутый",
+                      countinpack: "100",
+                      countinBox: "17.500",
+                      priceperone: "1,51 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EB.06.206",
+                      width: "4,8",
+                      long: "250",
+                      diametr: "63",
+                      strength: "25",
+                      type: "Изогнутый",
+                      countinpack: "100",
+                      countinBox: "15.000",
+                      priceperone: "1,85 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EB.05.205",
+                      width: "4,8",
+                      long: "300",
+                      diametr: "80",
+                      strength: "25",
+                      type: "Прямой",
+                      countinpack: "100",
+                      countinBox: "12.500",
+                      priceperone: "2,27 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EB.16.216",
+                      width: "4,8",
+                      long: "400",
+                      diametr: "109",
+                      strength: "25",
+                      type: "Прямой",
+                      countinpack: "100",
+                      countinBox: "10.000",
+                      priceperone: "2,77 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EB.07.207",
+                      width: "8",
+                      long: "250",
+                      diametr: "62",
+                      strength: "55",
+                      type: "Прямой",
+                      countinpack: "100",
+                      countinBox: "8.000",
+                      priceperone: "3,61 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EB.18.218",
+                      width: "8",
+                      long: "300",
+                      diametr: "75",
+                      strength: "55",
+                      type: "Прямой",
+                      countinpack: "100",
+                      countinBox: "6.000",
+                      priceperone: "4,03 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EB.19.219",
+                      width: "8",
+                      long: "380",
+                      diametr: "99",
+                      strength: "55",
+                      type: "Прямой",
+                      countinpack: "100",
+                      countinBox: "5.000",
+                      priceperone: "4,70 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EB.21.221",
+                      width: "8",
+                      long: "450",
+                      diametr: "124",
+                      strength: "55",
+                      type: "Прямой",
+                      countinpack: "100",
+                      countinBox: "4.500",
+                      priceperone: "5,88 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EB.15.215",
+                      width: "8",
+                      long: "550",
+                      diametr: "160",
+                      strength: "55",
+                      type: "Прямой",
+                      countinpack: "100",
+                      countinBox: "4.000",
+                      priceperone: "7,73 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EB.24.224",
+                      width: "8",
+                      long: "750",
+                      diametr: "220",
+                      strength: "55",
+                      type: "Прямой",
+                      countinpack: "100",
+                      countinBox: "2.000",
+                      priceperone: "12,43 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EB.17.217",
+                      width: "9",
+                      long: "762",
+                      diametr: "225",
+                      strength: "80",
+                      type: "Прямой",
+                      countinpack: "100",
+                      countinBox: "1.500",
+                      priceperone: "14,95 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EB.22.222",
+                      width: "9",
+                      long: "940",
+                      diametr: "290",
+                      strength: "80",
+                      type: "Прямой",
+                      countinpack: "100",
+                      countinBox: "1.500",
+                      priceperone: "20,83 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                  ]
+                }
+              }
+            },
+            {
+              img: {
+                src: "product2.jpg",
+                alt: "ХОМУТЫ ШАРИКОВЫЕ РАЗЪЕМНЫЕ"
+              },
+              name: "ХОМУТЫ ШАРИКОВЫЕ РАЗЪЕМНЫЕ",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 2 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 105 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 25 мм."
+                },
+              ],
+              price: '0.71 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal2-1.jpg",
+                    alt: "Стандартные кабельные стяжки"
+                  }
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "Ширина (мм)",
+                    "Длина (мм)",
+                    "Макс. Диаметр охвата (мм)",
+                    "Мин. Предел прочности (кг)",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "EA.01.101",
+                      width: "2",
+                      long: "105",
+                      diametr: "25",
+                      strength: "5",
+                      countinpack: "1.000",
+                      countinBox: "50.000",
+                      priceperone: "0,71 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EA.02.102",
+                      width: "3,5",
+                      long: "165",
+                      diametr: "45",
+                      strength: "7",
+                      countinpack: "500",
+                      countinBox: "25.000",
+                      priceperone: "1,34 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      images: [
+                        {
+                          src: "product-modal2-2.jpg",
+                          alt: "Стандартные кабельные стяжки"
+                        },
+                      ]
+                    },
+                    {
+                      article: "EA.04.104",
+                      width: "3,5",
+                      long: "235",
+                      diametr: "60",
+                      strength: "14",
+                      countinpack: "100",
+                      countinBox: "15.000",
+                      priceperone: "2,52 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                  ]
+                }
+              }
+            },
+            {
+              img: {
+                src: "product3.jpg",
+                alt: "Хомуты с двойным замком"
+              },
+              name: "Хомуты с двойным замком",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 4.8 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 165 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 35 мм."
+                },
+              ],
+              price: '2.02 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal3-1.jpg",
+                    alt: "Хомуты с двойным замком"
+                  }
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "Ширина (мм)",
+                    "Длина (мм)",
+                    "Макс. Диаметр охвата (мм)",
+                    "Мин. Предел прочности (кг)",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "CB.48.165",
+                      width: "4,8",
+                      long: "165",
+                      diametr: "35",
+                      strength: "25",
+                      countinpack: "100",
+                      countinBox: "20.000",
+                      priceperone: "2,02 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                  ]
+                }
+              }
+            },
+            {
+              img: {
+                src: "product4.jpg",
+                alt: "ХОМУТЫ С КРЕПЛЕНИЕМ ПОД ВИНТ"
+              },
+              name: "ХОМУТЫ С КРЕПЛЕНИЕМ ПОД ВИНТ",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 4 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 205 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 50 мм."
+                },
+              ],
+              price: '2.27 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal4-1.jpg",
+                    alt: "ХОМУТЫ С КРЕПЛЕНИЕМ ПОД ВИНТ"
+                  }
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "Ширина (мм)",
+                    "Длина (мм)",
+                    "Ø отверстия под винт (мм)",
+                    "Макс. Диаметр охвата (мм)",
+                    "Мин. Предел прочности (кг)",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "PV.40.205",
+                      width: "4",
+                      long: "205",
+                      diametr: "Ø 5,5",
+                      strength: "50",
+                      type: "22",
+                      countinpack: "100",
+                      countinBox: "17.000",
+                      priceperone: "2,27 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                  ]
+                }
+              }
+            },
+            {
+              img: {
+                src: "product5.jpg",
+                alt: "ХОМУТЫ С ДЮБЕЛЬ-ПИСТОНОМ"
+              },
+              name: "ХОМУТЫ С ДЮБЕЛЬ-ПИСТОНОМ",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 2.5 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 110 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 17 мм."
+                },
+              ],
+              price: '1.60 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal5-1.jpg",
+                    alt: "ХОМУТЫ С ДЮБЕЛЬ-ПИСТОНОМ"
+                  }
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "Ширина (мм)",
+                    "Длина (мм)",
+                    "Ø монтажного отверстия (мм)",
+                    "Макс.Толщина панели (мм)",
+                    "Макс.Диаметр охвата (мм)",
+                    "Мин.Предел прочности (кг)",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "DK.05.305",
+                      width: "2,5",
+                      long: "110",
+                      diametr: "Ø 4,8",
+                      str: "2",
+                      type: "22",
+                      strength: "12",
+                      countinpack: "100",
+                      countinBox: "25.000",
+                      priceperone: "1,60 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "DK.03.303",
+                      width: "3,6",
+                      long: "110",
+                      diametr: "Ø 6,4",
+                      str: "2",
+                      type: "21",
+                      strength: "18",
+                      countinpack: "100",
+                      countinBox: "10.000",
+                      priceperone: "1,85 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "DK.11.311",
+                      width: "4,8",
+                      long: "110",
+                      diametr: "Ø 6,4",
+                      str: "2,5",
+                      type: "17",
+                      strength: "25",
+                      countinpack: "100",
+                      countinBox: "12.500",
+                      priceperone: "2,17 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "DK.08.308",
+                      width: "4,8",
+                      long: "150",
+                      diametr: "Ø 6,4",
+                      str: "2",
+                      type: "30",
+                      strength: "25",
+                      countinpack: "100",
+                      countinBox: "10.000",
+                      priceperone: "2,37 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "DK.09.309",
+                      width: "4,8",
+                      long: "150",
+                      diametr: "Ø 6,4",
+                      str: "2",
+                      type: "45",
+                      strength: "25",
+                      countinpack: "100",
+                      countinBox: "8.000",
+                      priceperone: "2,60 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      images: [ 
+                        {
+                          src: "product-modal5-2.jpg",
+                          alt: "ХОМУТЫ С ДЮБЕЛЬ-ПИСТОНОМ"
+                        },
+                        {
+                          src: "product-modal5-3.jpg",
+                          alt: "ХОМУТЫ С ДЮБЕЛЬ-ПИСТОНОМ"
+                        },
+                      ]
+                    },
+                    {
+                      article: "DK.10.310",
+                      width: "2,5",
+                      long: "110",
+                      diametr: "Ø 6,4",
+                      str: "2",
+                      type: "22",
+                      strength: "12",
+                      countinpack: "100",
+                      countinBox: "20.000",
+                      priceperone: "1,71 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "DK.04.304",
+                      width: "3,6",
+                      long: "115",
+                      diametr: "Ø 6,4",
+                      str: "4",
+                      type: "21",
+                      strength: "18",
+                      countinpack: "100",
+                      countinBox: "15.000",
+                      priceperone: "1,85 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      images: [
+                        {
+                          src: "product-modal5-4.jpg",
+                          alt: "ХОМУТЫ С ДЮБЕЛЬ-ПИСТОНОМ"
+                        },
+                      ]
+                    },
+                    {
+                      article: "DK.06.306",
+                      width: "3,6",
+                      long: "165",
+                      diametr: "Ø 4,8",
+                      str: "2,5",
+                      type: "32",
+                      strength: "18",
+                      countinpack: "100",
+                      countinBox: "25.000",
+                      priceperone: "2,18 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "DK.07.307",
+                      width: "3,6",
+                      long: "166",
+                      diametr: "Ø 4,8",
+                      str: "3,5",
+                      type: "32",
+                      strength: "18",
+                      countinpack: "100",
+                      countinBox: "25.000",
+                      priceperone: "2,18 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                  ]
+                }
+              }
+            },
+            {
+              img: {
+                src: "product6.jpg",
+                alt: "ХОМУТЫ С ПРЯЖКОЙ"
+              },
+              name: "ХОМУТЫ С ПРЯЖКОЙ",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 6 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 235 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 63 мм."
+                },
+              ],
+              price: '6.22 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal6-1.jpg",
+                    alt: "ХОМУТЫ С ПРЯЖКОЙ"
+                  }
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "Ширина (мм)",
+                    "Длина (мм)",
+                    "Макс.Диаметр охвата (мм)",
+                    "Мин.Предел прочности (кг)",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "EF.03.803",
+                      width: "6",
+                      long: "235",
+                      diametr: "63",
+                      strength: "45",
+                      countinpack: "250",
+                      countinBox: "5.000",
+                      priceperone: "6,22 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      images: [
+                        {
+                          src: "product-modal6-2.jpg",
+                          alt: "ХОМУТЫ С ПРЯЖКОЙ"
+                        },
+                      ]
+                    },
+                    {
+                      article: "EF.01.801",
+                      width: "7",
+                      long: "365",
+                      diametr: "105",
+                      strength: "50",
+                      countinpack: "250",
+                      countinBox: "6.000",
+                      priceperone: "6,22 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                  ]
+                }
+              }
+            },
+            {
+              img: {
+                src: "product7.jpg",
+                alt: "СТЯЖКА ПЛАСТИКОВАЯ (ТВИСТ)"
+              },
+              name: "СТЯЖКА ПЛАСТИКОВАЯ (ТВИСТ)",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 8.5 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 21 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 4.5 мм."
+                },
+              ],
+              price: '1.18 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal7-1.jpg",
+                    alt: "СТЯЖКА ПЛАСТИКОВАЯ (ТВИСТ)"
+                  }
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "a (мм)",
+                    "b (мм)",
+                    "c (мм)",
+                    "Макс.Диаметр охвата (мм)",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "EA.05.105",
+                      width: "8,5",
+                      long: "21",
+                      diametr: "1,8",
+                      strength: "4,5",
+                      countinpack: "500",
+                      countinBox: "35.000",
+                      priceperone: "1,18 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EA.07.107",
+                      width: "12",
+                      long: "25",
+                      diametr: "2",
+                      strength: "7",
+                      countinpack: "500",
+                      countinBox: "30.000",
+                      priceperone: "1,26 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EA.10.110",
+                      width: "16",
+                      long: "30",
+                      diametr: "2,1",
+                      strength: "10,5",
+                      countinpack: "500",
+                      countinBox: "25.000",
+                      priceperone: "1,34 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EA.14.114",
+                      width: "20",
+                      long: "36",
+                      diametr: "2,1",
+                      strength: "14",
+                      countinpack: "500",
+                      countinBox: "20.000",
+                      priceperone: "1,51 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EA.17.117",
+                      width: "23",
+                      long: "40",
+                      diametr: "2,2",
+                      strength: "17",
+                      countinpack: "500",
+                      countinBox: "15.000",
+                      priceperone: "1,68 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                  ]
+                }
+              }
+            },
+            {
+              img: {
+                src: "product8.jpg",
+                alt: "СТЯЖКА ПЛАСТИКОВАЯ (ТВИСТ) С ДЮБЕЛЬ ПИСТОНОМ"
+              },
+              name: "СТЯЖКА ПЛАСТИКОВАЯ (ТВИСТ) С ДЮБЕЛЬ ПИСТОНОМ",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 28 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 10 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 4.8 мм."
+                },
+              ],
+              price: '2.44 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal8-1.jpg",
+                    alt: "СТЯЖКА ПЛАСТИКОВАЯ (ТВИСТ) С ДЮБЕЛЬ ПИСТОНОМ"
+                  }
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "a (мм)",
+                    "b (мм)",
+                    "Диам.Монтажного отверстия (мм)",
+                    "Макс.Диаметр охвата (мм)",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "EK.50.1050",
+                      width: "28",
+                      long: "3,6",
+                      diametr: "Ø 4,8",
+                      strength: "10,5",
+                      countinpack: "100",
+                      countinBox: "24.000",
+                      priceperone: "2,44 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.51.1051",
+                      width: "32,7",
+                      long: "3,6",
+                      diametr: "Ø 4,8",
+                      strength: "14",
+                      countinpack: "100",
+                      countinBox: "20.000",
+                      priceperone: "3,02 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.52.1052",
+                      width: "32",
+                      long: "31,4",
+                      diametr: "Ø 4,8",
+                      strength: "13,5",
+                      countinpack: "100",
+                      countinBox: "9.000",
+                      priceperone: "4,70 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                  ]
+                }
+              }
+            },
+            {
+              img: {
+                src: "product9.jpg",
+                alt: "ДЕРЖАТЕЛЬ ХОМУТОВ"
+              },
+              name: "ДЕРЖАТЕЛЬ ХОМУТОВ",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 9.6 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 42.8 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 22 мм."
+                },
+              ],
+              price: '1.85 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal9-1.jpg",
+                    alt: "ДЕРЖАТЕЛЬ ХОМУТОВ"
+                  }
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "a (мм)",
+                    "b (мм)",
+                    "Диам.Монтажного отверстия (мм)",
+                    "Макс. ширина стяжки(мм)",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "EK.09.1009",
+                      width: "9,6",
+                      long: "46,5",
+                      diametr: "Ø 6",
+                      strength: "4,8",
+                      countinpack: "250",
+                      countinBox: "25.000",
+                      priceperone: "2,02 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.17.1017",
+                      width: "13,2",
+                      long: "42,8",
+                      diametr: "Ø 8",
+                      strength: "8",
+                      countinpack: "250",
+                      countinBox: "12.500",
+                      priceperone: "2,86 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.11.1011",
+                      width: "10",
+                      long: "47,6",
+                      diametr: "Ø 6",
+                      strength: "-",
+                      countinpack: "250",
+                      countinBox: "25.000",
+                      priceperone: "1,85 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },   
+                  ]
+                }
+              }
+            },
+            {
+              img: {
+                src: "product10.jpg",
+                alt: "ДЕРЖАТЕЛЬ С ДЮБЕЛЬ-ПИСТОНОМ"
+              },
+              name: "ДЕРЖАТЕЛЬ С ДЮБЕЛЬ-ПИСТОНОМ",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 15.2 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 20 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 22 мм."
+                },
+              ],
+              price: '2.10 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal10-1.jpg",
+                    alt: "ДЕРЖАТЕЛЬ С ДЮБЕЛЬ-ПИСТОНОМ"
+                  }
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "Высота (мм)",
+                    "Ширина (мм)",
+                    "Диаметр отверстия (мм)",
+                    "a (мм)",
+                    "b (мм)",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "EK.10.1010",
+                      width: "21,7",
+                      long: "15,3",
+                      diametr: "Ø 4,8",
+                      strength: "11,3",
+                      type: "6",
+                      countinpack: "250",
+                      countinBox: "30.000",
+                      priceperone: "2,10 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.27.1027",
+                      width: "27,3",
+                      long: "15,2",
+                      diametr: "Ø 4,8",
+                      strength: "11,2",
+                      type: "9,8",
+                      countinpack: "250",
+                      countinBox: "30.000",
+                      priceperone: "2,18 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.28.1028",
+                      width: "36,3",
+                      long: "15,2",
+                      diametr: "Ø 4,8",
+                      strength: "11,2",
+                      type: "19",
+                      countinpack: "250",
+                      countinBox: "25.000",
+                      priceperone: "2,44 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.30.1030",
+                      width: "29",
+                      long: "28",
+                      diametr: "Ø 4,8",
+                      strength: "22,4",
+                      type: "12,4",
+                      countinpack: "250",
+                      countinBox: "18.000",
+                      priceperone: "2,52 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.18.1018",
+                      width: "22",
+                      long: "15,5",
+                      diametr: "Ø 4,8",
+                      strength: "11,6",
+                      type: "7",
+                      countinpack: "250",
+                      countinBox: "30.000",
+                      priceperone: "2,10 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.24.1024",
+                      width: "20",
+                      long: "20",
+                      diametr: "Ø 4,8",
+                      strength: "Ø 8",
+                      type: "-",
+                      countinpack: "250",
+                      countinBox: "25.000",
+                      priceperone: "2,69 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.29.1029",
+                      width: "32",
+                      long: "23",
+                      diametr: "Ø 6,4",
+                      strength: "Ø 7,4 - 10,2",
+                      type: "-",
+                      countinpack: "100",
+                      countinBox: "12.500",
+                      priceperone: "6,72 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                  ]
+                }
+              }
+            },
+            {
+              img: {
+                src: "product11.jpg",
+                alt: "ДЮБЕЛЬ-ПИСТОНЫ ПОД СТЯЖКИ"
+              },
+              name: "ДЮБЕЛЬ-ПИСТОНЫ ПОД СТЯЖКИ",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 17.8 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 16.3 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 4.8 мм."
+                },
+              ],
+              price: '2.10 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal11-1.jpg",
+                    alt: "ДЮБЕЛЬ-ПИСТОНЫ ПОД СТЯЖКИ"
+                  }
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "a (мм)",
+                    "b (мм)",
+                    "Ø монтажного отверстия (мм)",
+                    "Макс.Диаметр охвата (мм)",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "EK.04.1004",
+                      width: "17,8",
+                      long: "16,3",
+                      diametr: "Ø 6",
+                      strength: "4,8",
+                      countinpack: "500",
+                      countinBox: "40.000",
+                      priceperone: "2,10 руб"
+                    },
+                  ]
+                }
+              }
+            },
+            {
+              img: {
+                src: "product12.jpg",
+                alt: "ДЕРЖАТЕЛЬ МОНТАЖНОЙ ПЛАТЫ"
+              },
+              name: "ДЕРЖАТЕЛЬ МОНТАЖНОЙ ПЛАТЫ",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 15 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 24.5 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 4 мм."
+                },
+              ],
+              price: '3.02 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal12-1.jpg",
+                    alt: "ДЕРЖАТЕЛЬ МОНТАЖНОЙ ПЛАТЫ"
+                  }
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "Высота (мм)",
+                    "Ширина (мм)",
+                    "Ø верхнего отверстия (мм)",
+                    "Ø нижнего отверстия (мм)",
+                    "a (мм)",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "EK.08.1008",
+                      width: "24,5",
+                      long: "15",
+                      diametr: "Ø 4",
+                      strength: "Ø 4,5",
+                      type: "6,2",
+                      countinpack: "500",
+                      countinBox: "40.000",
+                      priceperone: "4,37 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.71.1071",
+                      width: "26,5",
+                      long: "15,3",
+                      diametr: "Ø 4",
+                      strength: "Ø 4,8",
+                      type: "9,2",
+                      countinpack: "250",
+                      countinBox: "40.000",
+                      priceperone: "3,02 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.72.1072",
+                      width: "30",
+                      long: "15,3",
+                      diametr: "Ø 4",
+                      strength: "Ø 4,8",
+                      type: "12,6",
+                      countinpack: "250",
+                      countinBox: "35.000",
+                      priceperone: "3,19 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                  ]
+                }
+              }
+            },
+            {
+              img: {
+                src: "product13.jpg",
+                alt: "ПЛОЩАДКИ ДЛЯ КРЕПЛЕНИЯ СТЯЖЕК"
+              },
+              name: "ПЛОЩАДКИ ДЛЯ КРЕПЛЕНИЯ СТЯЖЕК",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 20 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 20 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 3.2 мм."
+                },
+              ],
+              price: '2.18 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal13-1.jpg",
+                    alt: "ПЛОЩАДКИ ДЛЯ КРЕПЛЕНИЯ СТЯЖЕК"
+                  }
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "a (мм)",
+                    "b (мм)",
+                    "Диам.Монтажного отверстия (мм)",
+                    "Макс. ширина стяжки (мм)",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "EK.01.1001",
+                      width: "20",
+                      long: "20",
+                      diametr: "Ø 3,2",
+                      strength: "3,6",
+                      countinpack: "100",
+                      countinBox: "25.000",
+                      priceperone: "2,18 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "PK.01.1001",
+                      width: "20",
+                      long: "20",
+                      diametr: "Ø 3,2",
+                      strength: "3,6",
+                      countinpack: "100",
+                      countinBox: "25.000",
+                      priceperone: "2,52 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.01.1003",
+                      width: "28",
+                      long: "28",
+                      diametr: "Ø 4,3",
+                      strength: "4,8",
+                      countinpack: "100",
+                      countinBox: "12.500",
+                      priceperone: "3,28 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "PK.01.1003",
+                      width: "28",
+                      long: "28",
+                      diametr: "Ø 4,3",
+                      strength: "4,8",
+                      countinpack: "100",
+                      countinBox: "12.500",
+                      priceperone: "3,53 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                  ]
+                }
+              }
+            },
+            {
+              img: {
+                src: "product14.jpg",
+                alt: "ПЛОЩАДКИ МОНТАЖНЫЕ С КЛИПСАМИ"
+              },
+              name: "ПЛОЩАДКИ МОНТАЖНЫЕ С КЛИПСАМИ",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 20 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 15 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 5 мм."
+                },
+              ],
+              price: '2.52 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal14-1.jpg",
+                    alt: "ПЛОЩАДКИ МОНТАЖНЫЕ С КЛИПСАМИ"
+                  }
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "a (мм)",
+                    "b (мм)",
+                    "c (мм)",
+                    "d (мм)",
+                    "e (мм)",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "EK.25.1025",
+                      width: "13",
+                      long: "15",
+                      diametr: "13",
+                      strength: "8,7",
+                      type: "8,7",
+                      countinpack: "100",
+                      countinBox: "25.000",
+                      priceperone: "2,52 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.26.1026",
+                      width: "10",
+                      long: "16",
+                      diametr: "5",
+                      strength: "9,7",
+                      type: "5,8",
+                      countinpack: "100",
+                      countinBox: "25.000",
+                      priceperone: "2,60 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.16.1016",
+                      width: "13",
+                      long: "16",
+                      diametr: "13",
+                      strength: "6,1",
+                      type: "5,2",
+                      countinpack: "100",
+                      countinBox: "28.000",
+                      priceperone: "2,60 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.19.1019",
+                      width: "13",
+                      long: "25",
+                      diametr: "8,7",
+                      strength: "11",
+                      type: "7",
+                      countinpack: "100",
+                      countinBox: "20.000",
+                      priceperone: "3,44 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.05.1005",
+                      width: "25",
+                      long: "25",
+                      diametr: "12,7",
+                      strength: "12,5",
+                      type: "8",
+                      countinpack: "100",
+                      countinBox: "10.000",
+                      priceperone: "4,37 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.07.1007",
+                      width: "25",
+                      long: "25",
+                      diametr: "12,7",
+                      strength: "16,5",
+                      type: "12",
+                      countinpack: "100",
+                      countinBox: "7.000",
+                      priceperone: "4,70 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                  ]
+                }
+              }
+            },
+            {
+              img: {
+                src: "product15.jpg",
+                alt: "ПЛОЩАДКИ ПОД ВИНТ ДЛЯ СТЯЖЕК"
+              },
+              name: "ПЛОЩАДКИ ПОД ВИНТ ДЛЯ СТЯЖЕК",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 10 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 17 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 3.7 мм."
+                },
+              ],
+              price: '1.68 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal15-1.jpg",
+                    alt: "ПЛОЩАДКИ ПОД ВИНТ ДЛЯ СТЯЖЕК"
+                  }
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "a (мм)",
+                    "b (мм)",
+                    "Диам.монтажного отверстия (мм)",
+                    "Макс. ширина стяжки (мм)",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "EK.06.1006",
+                      width: "10",
+                      long: "17",
+                      diametr: "Ø 3,7",
+                      strength: "4,8",
+                      countinpack: "250",
+                      countinBox: "40.000",
+                      priceperone: "1,68 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                   {
+                      article: "EK.02.1002",
+                      width: "17",
+                      long: "23",
+                      diametr: "Ø 6,5",
+                      strength: "8",
+                      countinpack: "250",
+                      countinBox: "15.000",
+                      priceperone: "2,02 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.13.1013",
+                      width: "15",
+                      long: "30",
+                      diametr: "Ø 4,8",
+                      strength: "8",
+                      countinpack: "100",
+                      countinBox: "15.000",
+                      priceperone: "2,18 грн"
+                    },
+                  ]
+                }
+              }
+            },
+            {
+              img: {
+                src: "product16.jpg",
+                alt: "КАБЕЛЬНЫЕ ЗАЖИМЫ"
+              },
+              name: "КАБЕЛЬНЫЕ ЗАЖИМЫ",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 10 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 20.8 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 1.3 мм."
+                },
+              ],
+              price: '1.76 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal16-1.jpg",
+                    alt: "КАБЕЛЬНЫЕ ЗАЖИМЫ"
+                  }
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "a (мм)",
+                    "b (мм)",
+                    "с (мм)",
+                    "d (мм)",
+                    "e (мм)",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "EK.63.1063",
+                      width: "10",
+                      long: "20,8",
+                      diametr: "M5",
+                      strength: "6,4 (1/4\")",
+                      type: "1,3",
+                      countinpack: "100",
+                      countinBox: "30.000",
+                      priceperone: "1,76 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                   {
+                      article: "EK.64.1064",
+                      width: "10",
+                      long: "22,8",
+                      diametr: "M5",
+                      strength: "7,9 (5/16\")",
+                      type: "1,3",
+                      countinpack: "100",
+                      countinBox: "25.000",
+                      priceperone: "2,18 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.65.1065",
+                      width: "10",
+                      long: "24",
+                      diametr: "M5",
+                      strength: "9,5 (3/8\")",
+                      type: "1,3",
+                      countinpack: "100",
+                      countinBox: "20.000",
+                      priceperone: "2,35 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                  ]
+                }
+              }
+            },
+            {
+              img: {
+                src: "product17.jpg",
+                alt: "КРЫШКИ ДЛЯ ВИНТОВ И ШАЙБЫ"
+              },
+              name: "КРЫШКИ ДЛЯ ВИНТОВ И ШАЙБЫ",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 12 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 3.2 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 9.5 мм."
+                },
+              ],
+              price: '1.60 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal17-1.jpg",
+                    alt: "КРЫШКИ ДЛЯ ВИНТОВ И ШАЙБЫ"
+                  }
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "Высота (мм)",
+                    "a (мм)",
+                    "b (мм)",
+                    "с (мм)",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "EK.40.1040",
+                      width: "5",
+                      long: "Ø 12",
+                      diametr: "Ø 10",
+                      strength: "- ",
+                      countinpack: "500",
+                      countinBox: "35.000",
+                      priceperone: "1,60 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.41.1041",
+                      width: "5,6",
+                      long: "Ø 14",
+                      diametr: "Ø 11,5",
+                      strength: "- ",
+                      countinpack: "500",
+                      countinBox: "35.000",
+                      priceperone: "1,60 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.42.1042",
+                      width: "3,2",
+                      long: "Ø 12",
+                      diametr: "Ø 9,5",
+                      strength: "Ø 5,2 ",
+                      countinpack: "500",
+                      countinBox: "50.000",
+                      priceperone: "1,60 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                  ]
+                }
+              }
+            },
+            {
+              img: {
+                src: "product18.jpg",
+                alt: "ПЛАСТИКОВЫЕ КОЛПАЧКИ"
+              },
+              name: "ПЛАСТИКОВЫЕ КОЛПАЧКИ",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 0.8 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 4.2 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 13.9 мм."
+                },
+              ],
+              price: '1.60 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal18-1.jpg",
+                    alt: "ПЛАСТИКОВЫЕ КОЛПАЧКИ"
+                  }
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "a (мм)",
+                    "b (мм)",
+                    "с (мм)",
+                    "Диам.монтажного отверстия (мм)",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "EK.43.1043",
+                      width: "2,7",
+                      long: "7,8",
+                      diametr: "Ø 14,4",
+                      strength: "Ø 8",
+                      countinpack: "500",
+                      countinBox: "60.000",
+                      priceperone: "1,60 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "EK.44.1044",
+                      width: "0,8",
+                      long: "4,2",
+                      diametr: "Ø 13,9",
+                      strength: "Ø 11",
+                      countinpack: "500",
+                      countinBox: "75.000",
+                      priceperone: "1,60 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                  ]
+                }
+              }
+            },
+            {
+              img: {
+                src: "product19.jpg",
+                alt: "КАБЕЛЬНЫЕ МАРКЕРЫ"
+              },
+              name: "КАБЕЛЬНЫЕ МАРКЕРЫ",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 10 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 35 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 8 мм."
+                },
+              ],
+              price: '6.89 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal19-1.jpg",
+                    alt: "КАБЕЛЬНЫЕ МАРКЕРЫ"
+                  }
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "a (мм)",
+                    "b (мм)",
+                    "Ширина (мм)",
+                    "Длина (мм)",
+                    "Макс. ширина связки (мм)",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "ET.07.907",
+                      width: "10",
+                      long: "35",
+                      diametr: "7",
+                      strength: "32",
+                      type: "8",
+                      countinpack: "100",
+                      countinBox: "12.500",
+                      priceperone: "6,89 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "ET.06.906",
+                      width: "20",
+                      long: "45",
+                      diametr: "17",
+                      strength: "42",
+                      type: "8",
+                      countinpack: "100",
+                      countinBox: "6.000",
+                      priceperone: "8,90 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                  ]
+                }
+              }
+            },
+            {
+              img: {
+                src: "product20.jpg",
+                alt: "КЛЕЙКИЙ ДЕРЖАТЕЛЬ ЭТИКЕТКИ"
+              },
+              name: "КЛЕЙКИЙ ДЕРЖАТЕЛЬ ЭТИКЕТКИ",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 17 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 30 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 14.4 мм."
+                },
+              ],
+              price: '7.90 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal20-1.jpg",
+                    alt: "КЛЕЙКИЙ ДЕРЖАТЕЛЬ ЭТИКЕТКИ"
+                  }
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "a (мм)",
+                    "b (мм)",
+                    "Ширина (мм)",
+                    "Длина (мм)",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "ET.08.908",
+                      width: "17",
+                      long: "30",
+                      diametr: "14,4",
+                      strength: "27,5",
+                      countinpack: "100",
+                      countinBox: "12.000",
+                      priceperone: "7,90 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "ET.03.903",
+                      width: "17",
+                      long: "50",
+                      diametr: "15",
+                      strength: "49",
+                      countinpack: "50",
+                      countinBox: "6.000",
+                      priceperone: "11,26 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "ET.04.904",
+                      width: "17",
+                      long: "75",
+                      diametr: "15",
+                      strength: "72",
+                      countinpack: "25",
+                      countinBox: "5.000",
+                      priceperone: "15,46 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                  ]
+                }
+              }
+            },
+            {
+              img: {
+                src: "product21.jpg",
+                alt: "ДЕРЖАТЕЛЬ МАРКИРОВКИ"
+              },
+              name: "ДЕРЖАТЕЛЬ МАРКИРОВКИ",
+              size: [
+                {
+                  icon: "ic--protractor",
+                  name: "Ширина:",
+                  value: "от 40 мм."
+                },
+                {
+                  icon: "ic--angle",
+                  name: "Длина:",
+                  value: "от 30 мм."
+                },
+                {
+                  icon: "ic--trammel",
+                  name: "Диаметр:",
+                  value: "от 26 мм."
+                },
+              ],
+              price: '14.28 руб',
+              btn: "Подробнее",
+              characteristic: {
+                img: [
+                  {
+                    src: "product-modal21-1.jpg",
+                    alt: "ДЕРЖАТЕЛЬ МАРКИРОВКИ"
+                  }
+                ],
+                table: {
+                  head: [
+                    "Артикул",
+                    "a (мм)",
+                    "b (мм)",
+                    "Длина (мм)",
+                    "Ширина (мм)",
+                    "с (мм)",
+                    "Кол-во в упаковке",
+                    "Кол-во в коробке",
+                    "Цена за шт"
+                  ],
+                  body: [
+                    {
+                      article: "ET.11.911",
+                      width: "40",
+                      long: "30",
+                      diametr: "8",
+                      strength: "26",
+                      type: "22",
+                      countinpack: "60",
+                      countinBox: "7.500",
+                      priceperone: "14,28 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                    {
+                      article: "ET.12.912",
+                      width: "50",
+                      long: "30",
+                      diametr: "18",
+                      strength: "26",
+                      type: "22",
+                      countinpack: "60",
+                      countinBox: "6.000",
+                      priceperone: "14,53 <i class=\"fa fa-rub\" aria-hidden=\"true\">"
+                    },
+                  ]
+                }
+              }
+            },
+          ]
+        }
+      }, //- index
+      indexb: {
+        hostname: "indexb.html",
+        title: "Главная-б страница",
+        meta: {
+          description: "",
+          keywords: "",
+          openGraph: {
+            title: "Site name",
+            siteName: "Site name",
+            description: "Описание сайта",
+            type: "website",
+            locale: "ru_RU",
+            image: "microformat.png",
+            imageType: "image/png",
+            url: hostname
+          },
+          twitter: {
+            card: "summary",
+            site: "@flickr",
+            title: "My Site",
+            description: "My Site is cool",
+            image: hostname + "/img/logo/microformat.png"
+          }
+        },
+        content: {
+          heading: "Ваша заявка принята!",
+          subheading: "Наш менеджер свяжется с Вами в ближайшее время",
+          img: {
+            src: "img/succesimg.png",
+            alt: "Хомуты"
+          }
+        },
+      },
+      indexd: {
+        hostname: "indexd.html",
+        title: "Главная-д страница",
+        meta: {
+          description: "",
+          keywords: "",
+          openGraph: {
+            title: "Site name",
+            siteName: "Site name",
+            description: "Описание сайта",
+            type: "website",
+            locale: "ru_RU",
+            image: "microformat.png",
+            imageType: "image/png",
+            url: hostname
+          },
+          twitter: {
+            card: "summary",
+            site: "@flickr",
+            title: "My Site",
+            description: "My Site is cool",
+            image: hostname + "/img/logo/microformat.png"
+          }
+        },
+        content: {
+          heading: "Ваша заявка принята!",
+          subheading: "Наш менеджер свяжется с Вами в ближайшее время",
+          img: {
+            src: "img/succesimg.png",
+            alt: "Хомуты"
+          }
+        },
+      },
+    }

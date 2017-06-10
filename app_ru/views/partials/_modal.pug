@@ -1,0 +1,99 @@
+#nav__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal__small
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal__head
+        p.modal__heading Заказать обратный звонок
+      form.contactForm.modal__form(method='post', action='./mail/mail.php')
+        .row
+          .col-xs-10.col-xs-offset-1.col-sm-8.col-sm-offset-2
+            .row
+              .form-group.col-xs-12
+                .input__heading.input__heading--dark Укажите Ваше Имя
+                input.form-control.form__input.form__input--dark.form__name(aria-invalid='false', placeholder='Укажите Ваше Имя', required, name='name', type='text')    
+              .form-group.col-xs-12
+                .input__heading.input__heading--dark Укажите Ваш Телефон
+                input.form-control.form__input.form__input--dark.form__phone(aria-invalid='false', placeholder='+7(___)___-__-__', required, name='phone', type='tel')   
+              .col-xs-12    
+                .text-center
+                  button.btn.button.button--size(name='form[навбар]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") ПЕРЕЗВОНИТЕ МНЕ
+                  p.modal__subtext 
+                    i.fa.fa-lock(aria-hidden="true")
+                    | Гарантируем полную конфиденциальность ваших данных
+#b__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal__small
+    .modal-content.modal__content
+      i.hidden-xs.ic.ic__b-modal.ic--b_modal_l
+      i.hidden-xs.ic.ic__b-modal.ic--b_modal_r  
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal__head
+        p.modal__heading Укажите ваш email и вам на почту придет письмо с полным каталогом продукции
+      form.contactForm.modal__form(method='post', action='./mail/mail.php')
+        .row
+          .col-xs-10.col-xs-offset-1.col-sm-8.col-sm-offset-2
+            .row
+              .form-group.col-xs-12
+                .input__heading.input__heading--dark Укажите Ваш E-mail
+                input.form-control.form__input.form__input--dark.form__name(aria-invalid='false', placeholder='Укажите Ваш E-mail', required, name='email', type='email')      
+              .col-xs-12    
+                .text-center
+                  button.btn.button.button--size(name='form[навбар]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") ПЕРЕЗВОНИТЕ МНЕ
+                  p.modal__subtext 
+                    i.fa.fa-lock(aria-hidden="true")
+                    | Гарантируем полную конфиденциальность ваших данных                    
+each product, i in content.index.catalog.products
+  .modal.fade(tabindex='-1', role='dialog', id='modal__product_' + (i + 1))
+    .modal-dialog.modal-lg(role='document')
+      .modal-content
+        button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+          i.fa.fa-times(aria-hidden='true')
+        .modal-body.modal__body
+          h2.heading.heading--product-320.modal__head-name!= product.name
+          each photo in product.characteristic.img
+            .modal__photo
+              img.img-responsive.modal__img(src=content.site.hostname + 'img/' + photo.src, alt= photo.alt)    
+          form.contactForm.modal__form(method='post', action='./mail/mail.php')
+            .table-responsive
+              table.table.table-striped
+                thead.table__head
+                  tr.table__head-row
+                    i.fa.fa-check.visible-lg.table__icon.table__icon--1(aria-hidden="true")
+                    i.fa.fa-check.visible-lg.table__icon.table__icon--2(aria-hidden="true")
+                    i.fa.fa-check.visible-lg.table__icon.table__icon--3(aria-hidden="true")
+                    th.table__heading
+                    each head in product.characteristic.table.head
+                      th.table__heading!= head
+                tbody
+                  each body, j in product.characteristic.table.body
+                    unless (body.images)
+                      tr.table__row
+                        td.table__data(scope="row") 
+                          .table__radio-group.radio-btn
+                            input.table__radio-input(id="product-" + (i + 1) + '_' + (j + 1), type='checkbox', name= 'product_article[' + body.article +']')
+                            label.table__radio-label.table__radio-label--check(for='product-' + (i + 1) + '_' + (j + 1), tabindex="0")
+                              span.table__radio-icon
+                        each value, key in body
+                          td.table__data!= value
+                    else
+                      tr.table__row
+                        td.table__data.table__data--white(colspan='100')
+                          each img in body.images
+                            .modal__photo.modal__photo--no-padding
+                              img.img-responsive.modal__img(src= content.site.hostname + 'img/' + img.src, alt= img.alt)
+            .row
+              .col-xs-10.col-xs-offset-1
+                .row
+                  .form-group.col-xs-12.col-sm-6.col-md-4
+                    .input__heading.input__heading--dark Укажите Ваш Телефон
+                    input.form-control.form__input.form__input--dark.form__phone(aria-invalid='false', placeholder='+7(___)___-__-__', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')   
+                  .form-group.col-xs-12.col-sm-6.col-md-4
+                    .input__heading.input__heading--dark Укажите Ваше Имя
+                    input.form-control.form__input.form__input--dark.form__name(aria-invalid='false', placeholder='Укажите Ваше Имя', required, name='name', type='text')
+                  .col-xs-12.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-0    
+                    .text-center
+                      input(type='hidden', name='product_name[' + product.name + ']')
+                      button.btn.button.button--size.button--margin(name='form[навбар]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Заказать
+
+

@@ -1,0 +1,14 @@
+section.intro
+  .container
+    .row
+      .col-xs-12.col-sm-6.intro--height
+        h2.heading.intro__heading!=content.index.intro.heading
+        .intro__text!=content.index.intro.text
+        .intro__group
+          i.ic.ic--intro-1
+          .intro__icon  
+            i.ic.ic--intro-2  
+            i.fa.fa-question-circle.intro__question
+            .intro__answer!=content.index.intro.answer 
+      .col-xs-12.col-sm-6.intro__col.intro--height
+        img.intro__img.img-responsive(src=content.index.intro.img.src, alt=content.index.intro.img.alt)

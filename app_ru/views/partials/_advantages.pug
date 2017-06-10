@@ -1,0 +1,30 @@
+.advantages
+  .container.advantages__container
+    .row
+      .advantages__image
+        img.img-responsive.hidden-lg(src=content.index.advantages.img.src, alt=content.index.advantages.img.alt)
+        img.img-responsive.visible-lg(src=content.index.advantages.img2.src, alt=content.index.advantages.img.alt)
+      .col-xs-12.col-sm-4.advantages__col.advantages__col--left
+        .advantages__box
+          .advantages__heading
+            i.ic.advantages__icon.ic--drop
+            !=content.index.advantages.heading1
+          p.advantages__text!=content.index.advantages.text1
+      .col-xs-12.col-sm-4.advantages__col.advantages__col--right
+        .advantages__box
+          .advantages__heading
+            i.ic.advantages__icon.ic--tower
+            !=content.index.advantages.heading2
+          p.advantages__text!=content.index.advantages.text2 
+      .col-xs-12.col-sm-4.advantages__col.advantages__col--left
+        .advantages__box
+          .advantages__heading
+            i.ic.advantages__icon.ic--atom
+            !=content.index.advantages.heading3  
+          p.advantages__text!=content.index.advantages.text3
+      .col-xs-12.col-sm-4.advantages__col.advantages__col--right
+        .advantages__box
+          .advantages__heading
+            i.ic.advantages__icon.ic--resist
+            !=content.index.advantages.heading4  
+          p.advantages__text!=content.index.advantages.text4             

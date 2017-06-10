@@ -1,0 +1,1153 @@
++comment('general style')
++ic
+@each $sprite in $spritesheet-sprites
+  .ic--#{nth($sprite, 10)}
+    &:before
+      +bs($sprite)       
+a
+  text-decoration: none
+  outline: none
+  cursor: pointer
+  &:hover,
+  &:focus
+    text-decoration: none     
+    outline: none
+.heading
+  font: 600 30px/30px $main-font-bebas
+  color: $main-text-color  
+  margin: 0 0 25px
+  &--white
+    color: #fff
+  &:after
+    content: ''
+    display: block
+    width: 70px
+    height: 5px
+    background-color: #369
+    margin-top: 10px
+  &__span
+    display: block
+    font: 24px/24px $main-font-bebas
++rx(759)
+  .heading
+    &--product-320
+      font: 600 24px/30px $main-font-bebas   
++r(760)    
+  .heading
+    font: 600 48px/50px $main-font-bebas 
+    &:after
+      margin-top: 15px
+    &__span   
+      font: 30px/30px $main-font-bebas
++r(1200)    
+  .heading
+    font: 600 60px/60px $main-font-bebas 
+    &__span   
+      font: 36px/36px $main-font-bebas      
+.text-danger
+  color: #e74c3c
+  text-align: left
+.button
+  background: $main-btn-color  
+  color: $main-text-color 
+  box-shadow: inset 0px -8px 0px 0px rgba(255,162,0,1)
+  transition: all 0.3s ease
+  border: 0
+  padding: 14px 10px 14px
+  text-align: center
+  white-space: normal
+  font: 600 20px/30px $main-font-bebas
+  &--c
+    margin: 20px 0
+  &:hover,
+  &:focus
+    color: $main-text-color 
+    background: rgba(255,162,0,1)
+  &--size
+    width: 100%  
+  &__show
+    display: inline-block
+    font: 600 20px/22px $main-font-roboto
+    color: $main-text-color 
+    margin-bottom: 30px
+    &:hover,
+    &:focus
+      color: red
++r(992)
+  .button
+    &--margin
+      margin-top: 30px       
+.modal
+  -webkit-overflow-scrolling: touch
+  transform: translateZ(0)
+  &-dialog
+    margin-left: auto
+    margin-right: auto
+  &__body
+    padding-left: 0
+    padding-right: 0  
+  &__content
+    padding: 30px 0
+  &__heading
+    font: 600 24px/30px $main-font-bebas
+    color: $main-text-color 
+    text-align: center
+    margin-bottom: 20px  
+  &__subtext
+    padding-top: 10px
+    .fa
+      margin-right: 10px  
+  &__close
+    position: absolute
+    top: 10px
+    right: 10px
+    z-index: 25
+    &:hover,
+    &:focus
+      color: $main-btn-color 
+      opacity: 1
+  &__photo
+    margin-bottom: 20px    
++r(760)
+  .modal
+    &-lg
+      width: 760px
+    &__heading  
+      font: 600 30px/40px $main-font-bebas 
+      margin-bottom: 40px 
+      padding: 0 40px
+    &__close
+      font-size: 30px 
+    &__content
+      position: relative 
+      z-index: 25 
+      padding: 40px 0
+  .ic
+    &__b-modal
+      position: absolute  
+      z-index: 20 
+    &--b_modal
+      &_l
+        left: -128px
+        top: 10px
+      &_r
+        right: -111px
+        top: 30px   
++r(992)
+  .modal
+    &-lg
+      width: 992px         
++r(1200)
+  .modal
+    &-lg
+      width: 1200px  
+    &__close
+      font-size: 40px            
+.form
+  &__input
+    padding: 19px 10px 18px 10px
+    border: 0  
+    color: #878787
+    font: 400 14px/18px $main-font-roboto
+    &--dark
+      border: 1px solid #aeaeae
+  &__title
+    font: 400 20px/30px $main-font-bebas
+    color: #fff 
+.input
+  &__heading
+    font: 600 16px/20px $main-font-bebas
+    color: #fff
+    margin-bottom: 10px 
+    &--dark
+      color: $main-text-color   
++r(760)
+  .form
+    &__title
+      font: 400 24px/30px $main-font-bebas 
+      margin-bottom: 20px 
+  .input
+    &__heading
+      font: 600 20px/22px $main-font-bebas
+      margin-bottom: 10px
++r(992)
+  .form
+    &-group
+      margin-bottom: 20px
+    &__title
+      font: 400 30px/36px $main-font-bebas  
++comment("home page style")
+.navbar
+  padding: 20px 0
+  margin: 0
+  border-radius: 0
+  border: 0
+.logo
+  &__text
+    display: inline-block
+    color: $main-text-color
+    font: 300 12px/14px $main-font-roboto
+.address
+  display: table
+  padding-top: 15px
+  &__icon
+    display: table-cell
+    vertical-align: middle
+  &__info
+    display: table-cell
+    vertical-align: middle  
+    padding-left: 20px
+    text-align: left    
+  &__text
+    font: 600 14px/18px $main-font-bebas 
+    color: $main-text-color 
+  &__subtext
+    font: 400 14px/18px $main-font-bebas 
+    color: $main-text-color  
+.contact
+  &__link
+    display: block
+  &__number  
+    font: 400 18px/24px $main-font-bebas
+    color: #000
+    &--big
+      font: 400 36px/40px $main-font-bebas
+  &__btn
+    &--text
+      display: inline-block
+      font: 300 13px/18px $main-font-roboto
+      color: $main-text-color  
+      border-bottom: 1px dashed $main-text-color  
+  &__icon
+    margin-right: 5px   
++r(760)
+  .address
+    &__text
+      font: 600 18px/20px $main-font-bebas 
+    &__subtext
+      font: 400 16px/18px $main-font-bebas  
+  .contact
+    padding-top: 15px
+    &__number
+      font: 400 24px/24px $main-font-bebas    
+      &--big
+        font: 400 36px/40px $main-font-bebas
+    &__btn
+      &--text
+        font: 300 16px/18px $main-font-roboto   
++r(992)  
+  .address
+    &__text
+      font: 600 20px/24px $main-font-bebas 
+    &__subtext
+      font: 400 18px/20px $main-font-bebas  
+  .logo
+    &__text
+      padding-top: 5px
+  .address
+    padding-top: 0
+  .contact
+    padding-top: 0  
++r(1200)      
+  .contact
+    &__number
+      font: 400 28px/30px $main-font-bebas 
+      &--big
+        font: 400 48px/50px $main-font-bebas
++comment("header style")
+.header
+  padding: 20px 0
+  background: url(../img/headerbg.jpg) no-repeat 
+  background-position: center
+  background-size: cover
+  overflow: hidden
+  &__d
+    background: url(../img/headerc.jpg) no-repeat 
+    background-position: center
+    background-size: cover
+    padding: 0
+    &-col
+      background: url(../img/headercbg.jpg) no-repeat 
+      background-position: center
+      background-size: cover
+      padding-top: 30px
+      padding-bottom: 30px
+  &__form
+    position: relative
+    z-index: 10
+    margin: 20px auto 0
+    max-width: 320px
+    .ic
+      &__papka
+        position: absolute
+        top: 90px
+        right: -15px  
+.title
+  position: relative
+  padding: 18px 10px
+  border-top: 5px solid #369  
+  border-bottom: 5px solid #369  
+  border-left: 5px solid #369  
+  &:before
+    content: ''
+    position: absolute
+    right: 0
+    top: -4px
+    height: 53%
+    width: 5px
+    background: #369
+    transform: rotate(-12deg) 
+    transform-origin: 100% 0
+  &:after
+    content: ''
+    position: absolute
+    right: 0
+    bottom: -4px
+    height: 53%
+    width: 5px
+    background: #369
+    transform: rotate(12deg)
+    transform-origin: 0 100%
+  &__heading
+    font: 400 30px/36px $main-font-roboto
+    color: #fff
+    margin: 0 0 10px
+    text-transform: uppercase
+    &--color-dark
+      color: $main-text-color
+  &__subheading
+    font: 300 18px/24px $main-font-roboto
+    color: #fff 
+    margin: 0
+    &--span
+      font: 600 18px/24px $main-font-roboto
+      color: red  
+    &--color-dark
+      color: $main-text-color           
++r(480)     
+  .title
+    &:before,
+    &:after
+      height: 54% 
++r(760)
+  .header
+    padding: 50px 0  
+    &__form
+      max-width: none
+      margin: 0 auto
+      .ic
+        &__papka
+          top: 200px
+          right: -150px
+        &__arrow
+          position: absolute  
+          top: 320px
+          left: 15px
+      &--b
+        padding-top: 100px    
+    &__d
+      background: url(../img/headercbgsm.jpg) no-repeat 
+      background-position: center
+      background-size: cover
+      &-col
+        padding-top: 0
+        padding-bottom: 0
+        background: none      
+  .title
+    padding: 25px 30px 25px 35px  
+    &__heading
+      font: 400 36px/40px $main-font-roboto 
+    &:before
+      transform: rotate(-15deg) 
+      height: 53%
+    &:after   
+      transform: rotate(15deg) 
+      height: 53%  
++r(992)
+  .header
+    padding: 70px 0 
+    &__form
+      .ic
+        &__arrow  
+          top: 345px
+          right: 140px    
+  .title
+    border-width: 10px
+    &:before
+      transform: rotate(-17deg) 
+      height: 54%
+      width: 10px
+      top: -6px
+    &:after
+      transform: rotate(17deg)
+      height: 54%
+      width: 10px
+      bottom: -7px
+    &__heading
+      font: 600 40px/46px $main-font-roboto 
+    &__subheading
+      font: 300 24px/30px $main-font-roboto  
+      &--span  
+        font: 600 24px/30px $main-font-roboto    
++r(1200)
+  .header
+    &__form
+      .ic
+        &__arrow  
+          top: 315px
+          right: 40px
+  .title
+    &:before
+      height: 57%
+      top: -9px
+      transform: rotate(-17deg) 
+    &:after
+      transform: rotate(18deg)
+      height: 54%  
+      bottom: -7px
++comment("intro style")      
+.intro
+  padding: 40px 0 0
+  background: url(../img/introbg.jpg) no-repeat
+  background-position: center
+  background-size: cover
+  overflow: hidden
+  &__heading
+    margin-bottom: 20px
+  &__text
+    font: 300 14px/21px $main-font-roboto  
+    color: $main-text-color
+    margin-bottom: 25px
+  &__icon  
+    display: inline-block
+    position: relative
+  &__question   
+    display: inline-block
+    position: absolute
+    right: -20px
+    top: -20px
+    font-size: 20px
+    color: #369
+    cursor: pointer
+    &:hover,
+    &:focus
+      color: $main-btn-color
+      &~.intro__answer
+        opacity: 1
+        display: inline-block
+  &__answer
+    position: absolute
+    opacity: 0
+    display: none  
+    padding: 10px
+    font: 300 14px/21px $main-font-roboto 
+    color: $main-text-color
+    background-color: white
+    box-shadow: 0 0 15px rgba(0, 3, 2, 0.35)
+    width: 290px
+    top: -10px
+    right: 50%
+    margin-right: -105px
+.ic
+  &--intro-1
+    margin-right: 20px  
++r(760)
+  .intro
+    padding: 0
+    &__heading
+      margin-top: 50px 
+    &__group
+      padding-bottom: 50px 
+    &__col
+      background: url(../img/introbg.png) no-repeat
+      background-position: center
+      background-size: cover
+      text-align: center
+    &__answer
+      top: -50px
+      margin-right: 0
+      right: 0
+      left: 120%
+      z-index: 20
+    &__img
+      display: inline-block  
+  .ic
+    &--intro-1
+      margin-right: 40px     
++r(992)
+  .intro
+    &__heading
+      margin-bottom: 30px 
+    &__text
+      font: 300 18px/27px $main-font-roboto   
+  .ic
+    &--intro-1
+      margin-right: 60px       
++comment("catalog style")      
+.catalog
+  padding: 40px 0
+.product
+  box-shadow: 0 0 0 2px #f1f1f1
+  margin-bottom: 30px
+  transition: all 0.3s ease
+  &:hover,
+  &:focus
+    box-shadow: 2.5px 4.3px 45px rgba(0, 3, 2, 0.1)
+  &__photo
+    margin-bottom: 25px
+    text-align: center
+    img
+      display: inline-block
+  &__name
+    font: 600 18px/20px $main-font-bebas 
+    color: $main-text-color
+    margin-bottom: 20px
+    &:after
+      content: ''
+      display: block
+      margin: 5px auto 0
+      width: 75px
+      height: 3px
+      background-color: #369
+  &__option
+    margin-bottom: 20px
+  &__price
+    font: 400 18px/20px $main-font-roboto
+    color: $main-text-color 
+    margin-bottom: 10px 
+  &__cost   
+    font: 600 36px/40px $main-font-bebas  
+    color: red
+  &__order  
+    padding: 25px 0 45px
+    background-color: #f8f8f8
+  &__btn
+    width: 180px  
+    font: 600 24px/30px $main-font-bebas
+.option
+  &__item
+    margin-bottom: 5px
+    text-align: left
+  &__text   
+    font: 300 18px/20px $main-font-roboto 
+  &__icon
+    vertical-align: top  
++r(760)
+  .product
+    &__name
+      font: 600 24px/27px $main-font-bebas 
++comment("properties style")       
+.properties
+  padding: 25px 0 30px
+  background: url(../img/propertiesbg.jpg) no-repeat
+  background-position: center
+  background-size: cover
+  &__title
+    font: 500 18px/24px $main-font-roboto
+    color: #fff
+    margin-bottom: 25px
+  &__span
+    &--blue
+      color: #369
+    &--red
+      color: red
+  &__col
+    margin-bottom: 15px    
+  &__text
+    display: table-cell
+    font: 300 18px/24px $main-font-roboto
+    color: #fff
+  &__point  
+    display: table-cell
+    vertical-align: middle
+    font: 400 36px/36px $main-font-bebas
+    padding-right: 10px
+    &--blue
+      color: #369
+    &--red
+      color: red
++r(760)  
+  .properties
+    padding: 50px 0 100px
+    background: url(../img/propertiesbg-lg.jpg) no-repeat
+    background-position: center
+    background-size: cover
+    &__title
+      font: 500 24px/30px $main-font-roboto 
+    &__col
+      float: right  
+    &__point  
+      font: 400 48px/50px $main-font-bebas  
++r(1200)  
+  .properties
+    padding: 50px 0 180px       
+    &__title
+      margin-bottom: 60px
++comment("endurance style")       
+.endurance
+  padding: 35px 0
+  &__heading
+    font: 500 18px/24px $main-font-roboto
+    color: #191919 
+    margin-bottom: 15px
+  &__img
+    margin-bottom: 20px
+  &__text
+    font: 300 14px/21px $main-font-roboto
+    color: #191919
++r(760)     
+  .endurance
+    padding: 0
+    &__heading
+      margin-top: 100px
+    &__col
+      display: table-cell
+      vertical-align: middle
+      background: url(../img/endurancecolbg.png) no-repeat
+      background-position: center
+      background-size: cover
+      text-align: center
+    &__column
+      float: right  
+    &__height
+      display: table
+    &__text
+      margin-bottom: 150px
+    &__img    
+      display: inline-block
++r(992)       
+  .endurance
+    &__heading
+      font: 500 24px/30px $main-font-roboto
+      margin-bottom: 35px
+    &__img
+      margin-left: -15px  
+      margin-bottom: 30px
+    &__text
+      font: 300 18px/24px $main-font-roboto
++comment("advantages style")       
+.advantages
+  background: url(../img/advbg.jpg) no-repeat
+  background-position: center
+  background-size: cover
+  padding: 40px 0 10px
+  &__image
+    text-align: center
+    margin-bottom: 25px
+    img
+      display: inline-block
+  &__box
+    margin-bottom: 25px
+  &__heading
+    font: 600 24px/26px $main-font-bebas 
+    color: #369
+    margin-bottom: 20px
+  &__icon
+    margin-right: 10px
+  &__text
+    font: 300 14px/21px $main-font-roboto
+    color: #fff
+.ic
+  &--drop
+    &:before
+      background: url(../img/icons/drop.svg)     
+      width: 16px
+      height: 21px
+  &--tower
+    &:before
+      background: url(../img/icons/tower.svg)     
+      width: 16px
+      height: 21px
+  &--atom
+    &:before
+      background: url(../img/icons/atom.svg)     
+      width: 20px
+      height: 21px
+  &--resist
+    &:before
+      background: url(../img/icons/resist.svg)     
+      width: 16px
+      height: 21px            
++r(760)
+  .advantages
+    padding-top: 80px 
+    padding-bottom: 80px
+    &__container
+      position: relative
+    &__image
+      position: absolute
+      left: 50%
+      top: 40%
+      margin-left: -76px
+      margin-top: -85px
+    &__col
+      margin: 1px   
+      &--left
+        text-align: right
+        .advantages__icon
+          right: -35px
+          margin: 0
+      &--right
+        float: right   
+        .advantages__icon
+          left: -35px
+          margin: 0
+    &__heading    
+      position: relative
+    &__icon
+      position: absolute  
++r(1200)      
+  .advantages
+    &__box
+      margin-bottom: 45px
+    &__heading
+      font: 600 30px/36px $main-font-bebas
+    &__text
+      font: 300 18px/24px $main-font-roboto  
+    &__image
+      margin-left: -196px
+      margin-top: -142px  
++comment("experience style")     
+.experience
+  padding: 35px 0 45px
+  background: url(../img/expbgru.jpg) no-repeat
+  background-size: cover
+  background-position: center
+  &__text 
+    font: 500 18px/27px $main-font-roboto 
+    color: $main-text-color
+  &__span
+    font: 600 24px/27px $main-font-bebas
+    color: red   
+  &__subtext
+    font: 300 14px/21px $main-font-roboto 
++r(760)    
+  .experience
+    padding: 35px 0 100px
++r(992)
+  .experience
+    position: relative
+    padding: 40px 0 350px
+    &__icon
+      position: absolute
+      bottom: -40px
+      left: 0
+    &__text    
+      font: 500 24px/30px $main-font-roboto
+    &__span  
+      font: 600 30px/30px $main-font-bebas
+    &__subtext  
+      font: 300 18px/24px $main-font-roboto 
++comment("delivery style")       
+.delivery
+  padding: 35px 0 10px
+  background: url(../img/deliverybg-sm.jpg) no-repeat
+  background-size: cover
+  background-position: center
+  &__text
+    font: 300 14px/21px $main-font-roboto
+    margin-bottom: 15px
+    color: $main-text-color
+  &__img
+    display: inline-block  
++r(760)    
+  .delivery
+    padding-top: 80px
+    padding-bottom: 50px
+    &__text
+      margin-bottom: 30px
+    &__img
+      margin-top: 30px
+  .ic
+    &--intime
+      margin-bottom: 15px    
++r(992)
+  .delivery
+    padding-top: 100px  
+    padding-bottom: 80px
+    &__text
+      margin-bottom: 60px
+    &__group
+      margin-bottom: 100px  
+    &__text
+      font: 300 18px/24px $main-font-roboto 
++comment("contact style") 
+.contactus
+  &__form
+    padding: 30px 0  
+.form
+  &__heading
+    font: 600 30px/32px $main-font-bebas
+    text-align: center
+    margin-bottom: 25px
+    color: $main-text-color
+  &__text
+    font: 300 18px/24px $main-font-roboto
+    text-align: center
+    color: $main-text-color
+    margin-bottom: 25px
++r(760)
+  .contactus
+    background: url(../img/contactbg.jpg) no-repeat
+    background-size: cover
+    background-position: center  
+    &__container
+      position: relative
+    &__col
+      position: relative
+      z-index: 15
+      background: #fff   
+      transform: skew(-20deg);
+      transform-origin: 50% 50%
+    &__form
+      padding: 45px 0 55px  
+      transform: skew(20deg);
+      transform-origin: 50% 50%
+    &__icon
+      position: absolute
+  .form
+    &__heading
+      font: 600 36px/40px $main-font-bebas
+  .ic   
+    &--a4_1
+      bottom: -60px
+      left: -90px
+      z-index: 20  
+    &--a4_2
+      bottom: 40px
+      right: 30px
+      z-index: 10  
+    &--a4_3
+      bottom: 130px
+      left: 20px
+      z-index: 10  
++r(992)      
+  .form
+    &__text
+      font: 300 24px/28px $main-font-roboto
+  .ic   
+    &--a4_1
+      left: 20px  
+    &--a4_3
+      left: 100px  
++comment("sertificate style")  
+.sertificate
+  padding: 55px 0  
+  &__item
+    text-align: center
+  &__link
+    position: relative
+    display: inline-block
+  &__hover
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    padding: 5px
+    &:hover,
+    &:focus
+      .sertificate
+        &__bg,
+        &__icon
+          opacity: 1
+          visibility: visible
+          transition: all 0.3s ease
+  &__bg  
+    display: inline-block
+    opacity: 0
+    visibility: hidden
+    height: 100%
+    width: 100%
+    position: relative
+    background: rgba(51,102,153,0.8)
+    transition: all 0.3s ease
+  &__icon
+    position: absolute
+    opacity: 0
+    visibility: hidden
+    left: 50%
+    top: 50%
+    font-size: 50px
+    color: #fff
+    margin-left: -18.4px
+    margin-top: -20px  
+    transition: all 0.3s ease
++comment("map style")
+.map
+  position: relative
+  height: 400px
+  padding: 70px 0 50px
+  &__iframe
+    position: absolute
+    left: 0
+    top: 0
+    height: 100%
+    width: 100%
+  &__box
+    background-color: #fff
+    padding: 50px 15px    
+    position: relative
+    &:after  
+      content: ''
+      position: absolute
+      right: -48px
+      top: 0
+      width: 0
+      height: 100%
+      border-style: solid
+      border-width: 110px 0 110px 50px
+      border-color: transparent transparent transparent #fff
+  &__address
+    margin-bottom: 50px   
+  &__text  
+    font: 400 18px/20px $main-font-roboto
+    color: $main-text-color
+  &__address,
+  &__number
+    position: relative
+    z-index: 30  
++r(760)
+  .map
+    padding: 110px 0   
+    height: 550px
+    &__text  
+      font: 400 22px/24px $main-font-roboto
++r(992)
+  .map
+    padding: 150px 0  
++comment("footer style")
+.footer
+  position: relative
+  &__column
+    background-color: #369
+    padding-top: 45px
+    padding-bottom: 45px
+  &__heading
+    color: #fff
+    &:after
+      background: #fff  
+  &__text
+    font: 400 24px/28px $main-font-bebas
+    color: #fff 
+  &__col
+    text-align: center
+    padding-top: 20px
+    padding-bottom: 30px      
++r(760)
+  .footer
+    padding: 50px 0
+    &__bg
+      display: inline-block
+      position: absolute
+      top: 50px
+      height: 300px
+      left: 0
+      width: 55%
+      background-color: #369
+      &:after  
+        content: ''
+        position: absolute
+        right: -74px
+        width: 0
+        height: 100%
+        border-style: solid
+        border-width: 150px 0 150px 75px
+        border-color: transparent transparent transparent #369
+    &__column
+      background-color: transparent
+    &__col
+      text-align: right   
+    &__contact
+      padding-top: 90px   
++r(992)      
+  .footer
+    &__text
+      font: 400 36px/40px $main-font-bebas
++comment("product modal style")
+.table
+  &__head
+    background-color: #ececec  
+    &-row 
+      height: 90px
+      line-height: 90px
+  &__heading
+    font: 600 14px/16px $main-font-roboto
+    color: $main-text-color 
+    text-align: center 
+  &__data
+    font: 300 14px/18px $main-font-roboto
+    color: #070707
+    text-align: center   
+    &--white
+      background: #fff
+  &__radio
+    &-label
+      outline: none
+      margin: 0
+    &-input
+      display: none     
+      &:checked+.table__radio-label
+        .table__radio-icon
+          border: 2px solid #369
+          &:before      
+            position: absolute
+            content: "\f00c"
+            font-family: "FontAwesome"
+            font-size: 25px
+            color: #369
+            width: 20px
+            height: 20px
+            line-height: 15px
+            text-align: center
+            left: 0
+            top: 0   
+    &-icon  
+      position: relative
+      display: inline-block
+      height: 20px
+      width: 20px
+      margin-bottom: -4px
+      margin-right: 15px
+      background-color: transparent
+      border: 2px solid #aeaeae
+      border-radius: 5px  
+.modal
+  &__head-name
+    padding: 0 10px         
+  &__photo
+    margin: 20px auto 20px
+    padding: 0 15px  
++r(760)
+  .table
+    &__heading
+      font: 600 16px/18px $main-font-roboto
+  .modal
+    &__head-name
+      padding: 0 50px
+    &__photo
+      padding: 0 50px     
++r(1200)
+  .table
+    &__heading
+      font: 600 17px/20px $main-font-roboto
+    &__head
+      .table__heading:nth-child(1)
+        padding-left: 80px 
+      .table__heading:last-child
+        padding-right: 80px      
+    &__row
+      .table__data:nth-child(1)
+        padding-left: 80px 
+      .table__data:last-child
+        padding-right: 80px  
+    &-responsive
+      position: relative      
+    &__icon
+      position: absolute 
+      color: #c0c0c0
+      &--1
+        left: -5px
+        top: -22px
+        font-size: 130px
+      &--2
+        left: 85px
+        top: 60px
+        font-size: 20px
+      &--3
+        left: 100px
+        top: 45px
+        font-size: 18px    
+  .modal
+    &__head-name
+      padding: 0 80px
+    &__photo
+      padding: 0 80px
+      &--no-padding
+        padding: 0
+    &__box
+      position: relative
+      padding: 0 80px 
+      &:before
+        content: ''
+        width: 100%
+        height: 90px
+        left: 0
+        top: 0
+        position: absolute
+        display: inline-block
+        background: #ececec 
+      .table__head
+        position: relative
+        z-index: 25   
++comment("thanks page style") 
+.thanks
+  padding: 40px 0
+  background: url(../img/successbg.png) no-repeat
+  background-size: cover
+  background-position: center       
+  &__heading
+    font: 600 32px/40px $main-font-bebas
+    color: $main-text-color
+    margin-bottom: 20px
+    text-align: center
+  &__subheading  
+    font: 300 24px/30px $main-font-roboto   
+    color: $main-text-color
+    text-align: center
+    margin-bottom: 20px
+  &__img
+    text-align: center
+    img
+      display: inline-block  
+  &__info
+    position: relative
+    &:before
+      border-radius: 50%
+      border: 15px solid rgba(51,102,153,0.2)
+      height: 150px
+      width: 150px
+      line-height: 110px
+      top: 0
+      left: 50%
+      margin-left: -75px
+      text-align: center
+      content: '\f00c'  
+      display: inline-block
+      position: absolute
+      font-size: 50px
+      color: rgba(51,102,153,0.2) 
+      font-family: $font-awesome
++r(760)
+  .thanks
+    &__heading     
+      font: 600 50px/60px $main-font-bebas
+      text-align: left
+    &__subheading
+      text-align: left
+      margin: 0
+    &__info
+      &:before
+        left: 0  
+        border: 30px solid rgba(51,102,153,0.2)
+        font-size: 80px
+        line-height: 100px
+        margin-left: -100px  
++r(992)
+  .thanks
+    padding-top: 100px
+    &__img
+      position: relative
+      top: -50px  
+    &__heading     
+      font: 600 60px/64px $main-font-bebas 
+    &__info
+      &:before
+        height: 250px
+        width: 250px
+        line-height: 200px
+        font-size: 150px 
+        margin-left: -140px
+        margin-top: -50px      

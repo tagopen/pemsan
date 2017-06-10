@@ -1,0 +1,26 @@
+header.header
+  .container
+    .row
+      .col-xs-11.col-sm-6
+        .title
+          h1.title__heading!=content.index.header.title.heading
+          h2.title__subheading!=content.index.header.title.subheading
+      .col-xs-12.col-sm-5.col-sm-offset-1
+        .header__form.form
+          i.ic.ic__papka.ic--papka-xs.visible-xs
+          i.ic.ic__papka.ic--papka-sm.hidden-xs  
+          i.ic.ic__arrow.ic--arrow-sm.visible-sm
+          i.ic.ic__arrow.ic--arrow-md.visible-md.visible-lg  
+          .form__title!=content.index.header.form.title
+          form.contactForm.modal__form(method='post', action='./mail/mail.php')
+            .row
+              .col-xs-12.col-sm-10.col-md-8
+                .row
+                  .form-group.col-xs-12
+                    .input__heading Укажите Ваш Email
+                    input.form-control.form__input.form__email(aria-invalid='false', placeholder='Укажите Ваш Email', required, data-validation-required-message='Заполните поле корректно.', name='email', type='email')    
+            .row        
+              .col-xs-12.col-sm-10.col-md-8.text-left   
+                button.btn.button.button--size(name='form[хедер]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Получить каталог продукции
+
+  

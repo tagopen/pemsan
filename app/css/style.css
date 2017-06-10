@@ -244,7 +244,7 @@
 .ic--angle:before {
   width: 16px;
   height: 15px;
-  background: url(../img/sprite.png) -978px -605px no-repeat;
+  background: url(../img/sprite.png) -1045px -605px no-repeat;
 }
 
 .ic--arrow-md:before {
@@ -280,7 +280,7 @@
 .ic--intime:before {
   width: 196px;
   height: 83px;
-  background: url(../img/sprite.png) -772px -605px no-repeat;
+  background: url(../img/sprite.png) -194px -753px no-repeat;
 }
 
 .ic--intro-1:before {
@@ -310,7 +310,7 @@
 .ic--nova:before {
   width: 189px;
   height: 68px;
-  background: url(../img/sprite.png) -194px -753px no-repeat;
+  background: url(../img/sprite.png) -400px -753px no-repeat;
 }
 
 .ic--papka-sm:before {
@@ -325,6 +325,12 @@
   background: url(../img/sprite.png) -405px -440px no-repeat;
 }
 
+.ic--po4:before {
+  width: 263px;
+  height: 126px;
+  background: url(../img/sprite.png) -772px -605px no-repeat;
+}
+
 .ic--protractor:before {
   width: 20px;
   height: 14px;
@@ -334,7 +340,7 @@
 .ic--trammel:before {
   width: 16px;
   height: 14px;
-  background: url(../img/sprite.png) -1004px -605px no-repeat;
+  background: url(../img/sprite.png) -1071px -605px no-repeat;
 }
 
 a {
@@ -1233,7 +1239,7 @@ a:hover, a:focus {
     vertical-align: middle;
     background: url(../img/endurancecolbg.png) no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
     text-align: center;
   }
   .endurance__column {
